@@ -1,25 +1,35 @@
 import groovy.json.JsonSlurper
 
 plugins {
-    id "com.modrinth.minotaur" version "2.+"
-    id "com.matthewprenger.cursegradle" version "1.4.0"
+    id "me.modmuss50.mod-publish-plugin" version "0.4.5"
 }
 
 subprojects {
-    apply plugin: "com.modrinth.minotaur"
-    apply plugin: "com.matthewprenger.cursegradle"
+    apply plugin: "me.modmuss50.mod-publish-plugin"
 
     tasks.register('createJar', Zip) {
-        archiveFileName = "${project.mod_id}_v${project.mod_version}.jar"
-        destinationDirectory = file("$buildDir/built")
+        outputs.upToDateWhen { false }
 
-        from "$buildDir/src"
+        from "$projectDir/src"
+        archiveFileName = "${project.mod_id}_v${project.mod_version}.jar"
+        destinationDirectory = file("$projectDir/built")
+
+        filesMatching(['META-INF/mods.toml', 'fabric.mod.json']) {
+            println "Found file"
+            filter {
+                it.replace("\${mod_id}", "${project.mod_id}")
+                    .replace("\${mod_dependency_name}", "${project.mod_dependency_name}")
+                    .replace("\${mod_authors}", "${project.mod_authors}")
+                    .replace("\${mod_license}", "${project.mod_license}")
+                    .replace("\${mod_version}", "${project.mod_version}")
+                    .replace("\${minecraft_version}", "${project.minecraft_version}")
+            }
+        }
     }
 
     tasks.register('buildAndRelease') {}
-    tasks.curseforge.mustRunAfter tasks.createJar
-    tasks.modrinth.mustRunAfter tasks.createJar
-    tasks.buildAndRelease.dependsOn(tasks.curseforge, tasks.modrinth)
+    tasks.publishMods.mustRunAfter tasks.createJar
+    tasks.buildAndRelease.dependsOn(tasks.publishMods)
 
     afterEvaluate {
         def slurper = new JsonSlurper()
@@ -35,107 +45,64 @@ subprojects {
             File changeLog = rootProject.file("CHANGELOG.md")
             String changeLogText = changeLog.exists() ? changeLog.text : ""
 
-            if (env.MODRINTH) {
-                modrinth {
-                    token = env.MODRINTH
-                    versionName = "Repurposed Structures - ${project.mod_dependency_name} Compat"
-                    versionNumber = "${project.mod_version}"
-                    changelog = changeLogText
-                    projectId = projectUploadLocationsParsed["Modrinth"]
+            publishMods {
+                dryRun = true
+                file = tasks.createJar.archiveFile
 
-                    gameVersions = ["${project.minecraft_version}"]
-                    loaders = loadersParsed
-                    versionType = "RELEASE"
+                displayName  = "Repurposed Structures - ${project.mod_dependency_name} Compat"
+                type = STABLE
 
-                    uploadFile = tasks.createJar
+                changelog = changeLogText
+                loadersParsed.each { loader ->
+                    modLoaders.add(loader)
+                }
 
-                    dependencies {
-                        def optionalContainer = getOptional()
-                        def requiredContainer = getRequired()
+                if (env.CURSEFORGEKEY) {
+                    curseforge {
+                        accessToken = env.CURSEFORGEKEY
+
+                        projectId = projectUploadLocationsParsed["CurseForge"]
+                        minecraftVersions.add("${project.minecraft_version}")
 
                         if (loadersParsed.size() > 1) {
-                            neoforgeDependenciesParsed["Modrinth"].each { dep ->
-                                optionalContainer.project(dep)
-                            }
-                            fabricDependenciesParsed["Modrinth"].each { dep ->
-                                optionalContainer.project(dep)
-                            }
+                            ArrayList<String> combinedRequiredDeps = new ArrayList<>(neoforgeDependenciesParsed["CurseForge"])
+                            combinedRequiredDeps.addAll(fabricDependenciesParsed["CurseForge"])
+                            optional(combinedRequiredDeps.toArray(String[]::new))
                         }
                         else {
                             if (loadersParsed[0] == "neoforge") {
-                                neoforgeDependenciesParsed["Modrinth"].each { dep ->
-                                    requiredContainer.project(dep)
-                                }
+                                requires(neoforgeDependenciesParsed["CurseForge"].toArray(String[]::new))
                             }
                             else if (loadersParsed[0] == "fabric") {
-                                fabricDependenciesParsed["Modrinth"].each { dep ->
-                                    requiredContainer.project(dep)
-                                }
+                                requires(fabricDependenciesParsed["CurseForge"].toArray(String[]::new))
                             }
                         }
                     }
                 }
-            }
 
-            if (env.CURSEFORGEKEY) {
-                curseforge {
-                    apiKey = env.CURSEFORGEKEY
-                    project { proj ->
-                        id =  projectUploadLocationsParsed["CurseForge"]
-                        changelogType = "markdown"
-                        changelog = changeLogText
-                        releaseType = "release"
+                if (env.MODRINTH) {
+                    modrinth {
+                        accessToken = env.MODRINTH
 
-                        addGameVersion("${project.minecraft_version}")
-                        loadersParsed.each { loader ->
-                            addGameVersion(loader.capitalize())
+                        projectId = projectUploadLocationsParsed["Modrinth"]
+                        minecraftVersions.add("${project.minecraft_version}")
+
+                        if (loadersParsed.size() > 1) {
+                            ArrayList<String> combinedRequiredDeps = new ArrayList<>(neoforgeDependenciesParsed["Modrinth"])
+                            combinedRequiredDeps.addAll(fabricDependenciesParsed["Modrinth"])
+                            optional(combinedRequiredDeps.toArray(String[]::new))
                         }
-
-                        mainArtifact(tasks.createJar) {
-                            displayName = "Repurposed Structures - ${project.mod_dependency_name} Compat"
-                        }
-
-                        relations {
-                            if (loadersParsed.size() > 1) {
-                                neoforgeDependenciesParsed["CurseForge"].each { dep ->
-                                    optionalDependency(dep)
-                                }
-                                fabricDependenciesParsed["CurseForge"].each { dep ->
-                                    optionalDependency(dep)
-                                }
+                        else {
+                            if (loadersParsed[0] == "neoforge") {
+                                requires(neoforgeDependenciesParsed["Modrinth"].toArray(String[]::new))
                             }
-                            else {
-                                if (loadersParsed[0] == "neoforge") {
-                                    neoforgeDependenciesParsed["CurseForge"].each { dep ->
-                                        requiredDependency(dep)
-                                    }
-                                }
-                                else if (loadersParsed[0] == "fabric") {
-                                    fabricDependenciesParsed["CurseForge"].each { dep ->
-                                        requiredDependency(dep)
-                                    }
-                                }
+                            else if (loadersParsed[0] == "fabric") {
+                                requires(fabricDependenciesParsed["Modrinth"].toArray(String[]::new))
                             }
                         }
                     }
                 }
             }
         }
-    }
-}
-
-tasks.withType(ProcessResources).configureEach {
-    var replaceProperties = [
-            mod_id                  : mod_id,
-            mod_dependency_name     : mod_dependency_name,
-            mod_authors             : mod_authors,
-            mod_license             : mod_license,
-            mod_version             : mod_version,
-            minecraft_version       : minecraft_version
-    ]
-    inputs.properties replaceProperties
-
-    filesMatching(['META-INF/mods.toml','fabric.mods.json']) {
-        expand replaceProperties + [project: project]
     }
 }

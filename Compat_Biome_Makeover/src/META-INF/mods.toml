@@ -13,7 +13,7 @@ One of many compat mod for Repurposed Structures.
 Requires both Repurposed Structures mod and ${mod_dependency_name} mod to be on.
 '''
 
-[[dependencies.repurposed_structures_biome_makeover_compat]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     type="required"
     versionRange="[${minecraft_version},)"
