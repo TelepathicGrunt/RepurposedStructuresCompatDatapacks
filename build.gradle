@@ -18,6 +18,7 @@ subprojects {
             filter {
                 it.replace("\${mod_id}", "${project.mod_id}")
                     .replace("\${mod_dependency_name}", "${project.mod_dependency_name}")
+                    .replace("\${mod_dependency_mod_id}", "${project.mod_dependency_mod_id}")
                     .replace("\${mod_authors}", "${project.mod_authors}")
                     .replace("\${mod_license}", "${project.mod_license}")
                     .replace("\${mod_version}", "${project.mod_version}")

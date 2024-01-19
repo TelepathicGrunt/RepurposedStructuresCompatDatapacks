@@ -17,3 +17,13 @@ Requires both Repurposed Structures mod and ${mod_dependency_name} mod to be on.
     modId="minecraft"
     type="required"
     versionRange="[${minecraft_version},)"
+
+[[dependencies.${mod_id}]]
+    modId="repurposed_structures"
+    type="required"
+    ordering="AFTER"
+
+[[dependencies.${mod_dependency_mod_id}]]
+    modId="${mod_dependency_mod_id}"
+    type="required"
+    ordering="AFTER"

@@ -21,6 +21,8 @@
 
   "depends": {
     "fabricloader": "*",
+    "repurposed_structures": "*",
+    "${mod_dependency_mod_id}": "*",
     "minecraft": ">=${minecraft_version}"
   }
 }
