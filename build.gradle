@@ -14,7 +14,7 @@ subprojects {
         archiveFileName = "${project.mod_id}_v${project.mod_version}.jar"
         destinationDirectory = file("$projectDir/built")
 
-        filesMatching(['META-INF/mods.toml', 'fabric.mod.json']) {
+        filesMatching(['META-INF/mods.toml', 'fabric.mod.json', 'pack.mcmeta']) {
             filter {
                 it.replace("\${mod_id}", "${project.mod_id}")
                     .replace("\${mod_dependency_name}", "${project.mod_dependency_name}")

@@ -7,4 +7,6 @@ pluginManagement {
 
 plugins {}
 
+include 'Compat_All_Bark_All_Bite'
 include 'Compat_Biome_Makeover'
+include 'Compat_Friends_And_Foes'
