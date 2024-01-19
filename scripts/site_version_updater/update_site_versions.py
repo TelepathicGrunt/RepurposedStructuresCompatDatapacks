@@ -5,7 +5,7 @@ import json
 CF_MR_TO_GAME_VERSIONS_DICT = {
     # ( Project name, CF Project ID, CF File ID, MR File ID )
 
-#    ('Friends and Foes Compat Datapack', '592278', 4994554, 'D8u1J7l4'): ['1.20.2'],
+#    ('Friends and Foes Compat Datapack', '592278', 4994554, 'D8u1J7l4'): ['1.20.2', '1.20.3', '1.20.4'],
 #    ('All Bark All Bite Compat Datapack', '906468', 4994465, 'l7GgSqoh'): ['1.20.2'],
 #
 #    ('Structure Void Toggle NeoForge', '357304', 4888921, '79xRp4Rg'): ['1.20.2', '1.20.3', '1.20.4'],
@@ -64,7 +64,7 @@ for fileVersions, gameVersions in CF_MR_TO_GAME_VERSIONS_DICT.items():
     CfJsonData = json.dumps(MrData)
     MrResponse = requests.patch(url=MrURL, headers=MR_PATCH_HEADERS, data=CfJsonData)
     print(f"{fileVersions[0]} Modrinth response is: {MrResponse.status_code} - {MrResponse.text} - Data: {CfJsonData}")
-    if MrResponse.status_code != 200:
-        input("Error in CF response. Click Enter to continue program.")
+    if MrResponse.status_code != 204:
+        input("Error in Modrinth response. Click Enter to continue program.")
 
 
