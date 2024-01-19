@@ -15,7 +15,6 @@ subprojects {
         destinationDirectory = file("$projectDir/built")
 
         filesMatching(['META-INF/mods.toml', 'fabric.mod.json']) {
-            println "Found file"
             filter {
                 it.replace("\${mod_id}", "${project.mod_id}")
                     .replace("\${mod_dependency_name}", "${project.mod_dependency_name}")
@@ -32,8 +31,9 @@ subprojects {
     tasks.buildAndRelease.dependsOn(tasks.publishMods)
 
     afterEvaluate {
-        def slurper = new JsonSlurper()
+        project.version = project.mod_version
 
+        def slurper = new JsonSlurper()
         Map<String, String> projectUploadLocationsParsed = slurper.parseText(project.projectUploadLocations)
         Map<String, List<String>> neoforgeDependenciesParsed = slurper.parseText(project.neoforgeDependencies)
         Map<String, List<String>> fabricDependenciesParsed = slurper.parseText(project.fabricDependencies)
@@ -61,6 +61,7 @@ subprojects {
                     curseforge {
                         accessToken = env.CURSEFORGEKEY
 
+                        println "CF ProjectId = ${projectUploadLocationsParsed["CurseForge"]}"
                         projectId = projectUploadLocationsParsed["CurseForge"]
                         minecraftVersions.add("${project.minecraft_version}")
 
