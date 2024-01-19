@@ -68,18 +68,20 @@ subprojects {
                             minecraftVersions.add(supportedMinecraftVersion)
                         }
 
-                        if (loadersParsed.size() > 1) {
-                            ArrayList<String> combinedRequiredDeps = new ArrayList<>(neoforgeDependenciesParsed["CurseForge"])
+                        ArrayList<String> combinedRequiredDeps = new ArrayList<>()
+
+                        if (loadersParsed.contains("neoforge")) {
+                            combinedRequiredDeps.addAll(neoforgeDependenciesParsed["CurseForge"])
+                        }
+                        if (loadersParsed.contains("fabric")) {
                             combinedRequiredDeps.addAll(fabricDependenciesParsed["CurseForge"])
+                        }
+
+                        if (loadersParsed.size() > 1) {
                             optional(combinedRequiredDeps.toArray(String[]::new))
                         }
                         else {
-                            if (loadersParsed[0] == "neoforge") {
-                                requires(neoforgeDependenciesParsed["CurseForge"].toArray(String[]::new))
-                            }
-                            else if (loadersParsed[0] == "fabric") {
-                                requires(fabricDependenciesParsed["CurseForge"].toArray(String[]::new))
-                            }
+                            requires(combinedRequiredDeps.toArray(String[]::new))
                         }
                     }
                 }
@@ -93,18 +95,20 @@ subprojects {
                             minecraftVersions.add(supportedMinecraftVersion)
                         }
 
-                        if (loadersParsed.size() > 1) {
-                            ArrayList<String> combinedRequiredDeps = new ArrayList<>(neoforgeDependenciesParsed["Modrinth"])
+                        ArrayList<String> combinedRequiredDeps = new ArrayList<>()
+
+                        if (loadersParsed.contains("neoforge")) {
+                            combinedRequiredDeps.addAll(neoforgeDependenciesParsed["Modrinth"])
+                        }
+                        if (loadersParsed.contains("fabric")) {
                             combinedRequiredDeps.addAll(fabricDependenciesParsed["Modrinth"])
+                        }
+
+                        if (loadersParsed.size() > 1) {
                             optional(combinedRequiredDeps.toArray(String[]::new))
                         }
                         else {
-                            if (loadersParsed[0] == "neoforge") {
-                                requires(neoforgeDependenciesParsed["Modrinth"].toArray(String[]::new))
-                            }
-                            else if (loadersParsed[0] == "fabric") {
-                                requires(fabricDependenciesParsed["Modrinth"].toArray(String[]::new))
-                            }
+                            requires(combinedRequiredDeps.toArray(String[]::new))
                         }
                     }
                 }
