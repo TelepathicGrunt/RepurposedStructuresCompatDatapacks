@@ -63,7 +63,9 @@ subprojects {
 
                         println "CF ProjectId = ${projectUploadLocationsParsed["CurseForge"]}"
                         projectId = projectUploadLocationsParsed["CurseForge"]
-                        minecraftVersions.add("${project.minecraft_version}")
+                        supportedMinecraftVersionsParsed.each { supportedMinecraftVersion ->
+                            minecraftVersions.add(supportedMinecraftVersion)
+                        }
 
                         if (loadersParsed.size() > 1) {
                             ArrayList<String> combinedRequiredDeps = new ArrayList<>(neoforgeDependenciesParsed["CurseForge"])
@@ -86,7 +88,9 @@ subprojects {
                         accessToken = env.MODRINTH
 
                         projectId = projectUploadLocationsParsed["Modrinth"]
-                        minecraftVersions.add("${project.minecraft_version}")
+                        supportedMinecraftVersionsParsed.each { supportedMinecraftVersion ->
+                            minecraftVersions.add(supportedMinecraftVersion)
+                        }
 
                         if (loadersParsed.size() > 1) {
                             ArrayList<String> combinedRequiredDeps = new ArrayList<>(neoforgeDependenciesParsed["Modrinth"])
