@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+
+  "name": "Repurposed Structures - ${mod_dependency_name} Compat",
+  "description": "One of many compat mod for Repurposed Structures. Requires both Repurposed Structures mod and ${mod_dependency_name} mod to be on.",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/repurposed-structures",
+    "issues": "https://github.com/TelepathicGrunt/RepurposedStructures/issues"
+  },
+
+  "license": "${mod_license}",
+
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": ">=${minecraft_version}"
+  }
+}
