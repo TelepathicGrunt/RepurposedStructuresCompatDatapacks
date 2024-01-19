@@ -34,10 +34,11 @@ subprojects {
         project.version = project.mod_version
 
         def slurper = new JsonSlurper()
-        Map<String, String> projectUploadLocationsParsed = slurper.parseText(project.projectUploadLocations)
-        Map<String, List<String>> neoforgeDependenciesParsed = slurper.parseText(project.neoforgeDependencies)
-        Map<String, List<String>> fabricDependenciesParsed = slurper.parseText(project.fabricDependencies)
-        List<String> loadersParsed = slurper.parseText(project.loaders)
+        Map<String, String> projectUploadLocationsParsed = slurper.parseText(project.project_upload_locations) as Map<String, String>
+        Map<String, List<String>> neoforgeDependenciesParsed = slurper.parseText(project.neoforge_dependencies) as Map<String, List<String>>
+        Map<String, List<String>> fabricDependenciesParsed = slurper.parseText(project.fabric_dependencies) as Map<String, List<String>>
+        List<String> loadersParsed = slurper.parseText(project.loaders) as List<String>
+        List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
 
         var env = System.getenv()
         if (projectUploadLocationsParsed != null && loadersParsed != null) {
@@ -46,7 +47,6 @@ subprojects {
             String changeLogText = changeLog.exists() ? changeLog.text : ""
 
             publishMods {
-                dryRun = true
                 file = tasks.createJar.archiveFile
 
                 displayName  = "Repurposed Structures - ${project.mod_dependency_name} Compat"
