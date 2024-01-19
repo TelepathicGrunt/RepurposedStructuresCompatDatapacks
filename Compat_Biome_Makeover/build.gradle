@@ -1,7 +1,1 @@
 plugins {}
-
-
-
-
-task buildAndRelease{}
-tasks.buildAndRelease.dependsOn(tasks.curseforge, tasks.modrinth)

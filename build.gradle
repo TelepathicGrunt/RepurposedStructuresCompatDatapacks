@@ -9,6 +9,18 @@ subprojects {
     apply plugin: "com.modrinth.minotaur"
     apply plugin: "com.matthewprenger.cursegradle"
 
+    tasks.register('createJar', Zip) {
+        archiveFileName = "${project.mod_id}_v${project.mod_version}.jar"
+        destinationDirectory = file("$buildDir/built")
+
+        from "$buildDir/src"
+    }
+
+    tasks.register('buildAndRelease') {}
+    tasks.curseforge.mustRunAfter tasks.createJar
+    tasks.modrinth.mustRunAfter tasks.createJar
+    tasks.buildAndRelease.dependsOn(tasks.curseforge, tasks.modrinth)
+
     afterEvaluate {
         def slurper = new JsonSlurper()
 
@@ -83,35 +95,25 @@ subprojects {
                             displayName = "Repurposed Structures - ${project.mod_dependency_name} Compat"
                         }
 
-                        if (uploadDependencies.size() > 0) {
-                            relations {
-                                uploadDependencies.each { dep, required ->
-                                    if (required) {
+                        relations {
+                            if (loadersParsed.size() > 1) {
+                                neoforgeDependenciesParsed["CurseForge"].each { dep ->
+                                    optionalDependency(dep)
+                                }
+                                fabricDependenciesParsed["CurseForge"].each { dep ->
+                                    optionalDependency(dep)
+                                }
+                            }
+                            else {
+                                if (loadersParsed[0] == "neoforge") {
+                                    neoforgeDependenciesParsed["CurseForge"].each { dep ->
                                         requiredDependency(dep)
                                     }
-                                    else {
-                                        optionalDependency(dep)
+                                }
+                                else if (loadersParsed[0] == "fabric") {
+                                    fabricDependenciesParsed["CurseForge"].each { dep ->
+                                        requiredDependency(dep)
                                     }
-                                }
-                            }
-                        }
-                        if (loadersParsed.size() > 1) {
-                            neoforgeDependenciesParsed["CurseForge"].each { dep ->
-                                optionalDependency(dep)
-                            }
-                            fabricDependenciesParsed["CurseForge"].each { dep ->
-                                optionalDependency(dep)
-                            }
-                        }
-                        else {
-                            if (loadersParsed[0] == "neoforge") {
-                                neoforgeDependenciesParsed["CurseForge"].each { dep ->
-                                    requiredDependency(dep)
-                                }
-                            }
-                            else if (loadersParsed[0] == "fabric") {
-                                fabricDependenciesParsed["CurseForge"].each { dep ->
-                                    requiredDependency(dep)
                                 }
                             }
                         }
@@ -136,8 +138,4 @@ tasks.withType(ProcessResources).configureEach {
     filesMatching(['META-INF/mods.toml','fabric.mods.json']) {
         expand replaceProperties + [project: project]
     }
-}
-
-task createJar{
-
 }
