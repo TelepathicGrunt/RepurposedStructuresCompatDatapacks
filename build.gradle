@@ -1,10 +1,18 @@
+import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
+import groovy.json.StringEscapeUtils
 
 plugins {
     id "me.modmuss50.mod-publish-plugin" version "0.4.5"
 }
 
+Map<String, String> env = System.getenv()
+JsonSlurper slurper = new JsonSlurper()
+
 subprojects {
+
+    // UPLOADING SECTION
+
     apply plugin: "me.modmuss50.mod-publish-plugin"
 
     tasks.register('createJar', Zip) {
@@ -34,14 +42,12 @@ subprojects {
     afterEvaluate {
         project.version = project.mod_version
 
-        def slurper = new JsonSlurper()
         Map<String, String> projectUploadLocationsParsed = slurper.parseText(project.project_upload_locations) as Map<String, String>
         Map<String, List<String>> neoforgeDependenciesParsed = slurper.parseText(project.neoforge_dependencies) as Map<String, List<String>>
         Map<String, List<String>> fabricDependenciesParsed = slurper.parseText(project.fabric_dependencies) as Map<String, List<String>>
         List<String> loadersParsed = slurper.parseText(project.loaders) as List<String>
         List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
 
-        var env = System.getenv()
         if (projectUploadLocationsParsed != null && loadersParsed != null) {
 
             File changeLog = rootProject.file("CHANGELOG.md")
@@ -87,7 +93,7 @@ subprojects {
 
                 if (env.MODRINTH) {
                     modrinth {
-                        accessToken = env.MODRINTH
+                        accessToken = env.MODRINTH_TOKEN
 
                         projectId = projectUploadLocationsParsed["Modrinth"]
                         supportedMinecraftVersionsParsed.each { supportedMinecraftVersion ->
@@ -113,5 +119,54 @@ subprojects {
                 }
             }
         }
+    }
+
+    // UPDATING PUBLISHED VERSIONS SECTION
+
+    tasks.register('updateExistingVersioning') {
+        String MR_PATCH_ENDPOINT = "https://api.modrinth.com/v2/version/%s"
+        String CF_POST_ENDPOINT = "https://minecraft.curseforge.com/api/projects/%s/update-file"
+        String CF_GAME_VERSION_TYPES_ENDPOINT = "https://minecraft.curseforge.com/api/game/version-types?cache=true"
+        String CF_GAME_VERSIONS_ENDPOINT = "https://minecraft.curseforge.com/api/game/versions?cache=true"
+        List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
+
+        // Construct the IDs for Minecraft Versions that Curseforge requires. Requires two endpoint's data because why the hell not Curseforge.
+        Process cfVersionTypesResponse = "curl -X GET ${CF_GAME_VERSION_TYPES_ENDPOINT} -H \"X-Api-Token:${env.CURSEFORGEKEY}\"".execute()
+        Process cfVersionsResponse = "curl -X GET ${CF_GAME_VERSIONS_ENDPOINT} -H \"X-Api-Token:${env.CURSEFORGEKEY}\"".execute()
+
+        List<Map<String, String>> curseForgeVersionTypes = slurper.parseText(cfVersionTypesResponse.getText()) as List<Map<String, String>>
+        List<Map<String, String>> curseForgeVersions = slurper.parseText(cfVersionsResponse.getText()) as List<Map<String, String>>
+
+        Map<String, String> CFMcVersionsToIds = [:]
+        List<Map<String, String>> CfMcVersions = curseForgeVersions.findAll { gv ->
+            curseForgeVersionTypes.any { gvt ->
+                gv['gameVersionTypeID'] == gvt['id']
+            }
+        }
+        for (McGameVersion in CfMcVersions) {
+            CFMcVersionsToIds[McGameVersion['name']] = McGameVersion['id']
+        }
+
+
+        // Update CurseForge file versions
+
+        String curseforgeProjectId = project.cf_project_id
+        Integer curseforgeFileId = project.latest_cf_file as Integer
+        String cfData = StringEscapeUtils.escapeJavaScript(JsonOutput.toJson([
+            "fileID": curseforgeFileId,
+            "gameVersions": supportedMinecraftVersionsParsed.collect{ CFMcVersionsToIds[it]}
+        ]))
+        Process curseforgeVersionUpdateResponse = "curl -X POST ${CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)} -H \"X-Api-Token:${env.CURSEFORGEKEY}\" -F metadata=${cfData}".execute()
+        println "CurseForge Response: ${curseforgeVersionUpdateResponse.getText()}"
+
+
+        // Update Modrinth file versions
+
+        String modrinthFileId = project.latest_mr_file
+        String mrData = StringEscapeUtils.escapeJavaScript(JsonOutput.toJson([
+            "game_versions": supportedMinecraftVersionsParsed.toArray(String[]::new)
+        ]))
+        Process modrinthVersionUpdateResponse = "curl -X PATCH ${MR_PATCH_ENDPOINT.replace("%s", modrinthFileId)} -H \"Content-Type: application/json\" -H \"Authorization: ${env.MODRINTH_TOKEN}\" -d \"${mrData}\"".execute()
+        println "Modrinth Response: ${modrinthVersionUpdateResponse.getText()}"
     }
 }
