@@ -6,7 +6,7 @@
       "weight": 6,
       "element": {
         "location": "all_bark_all_bite:outposts/mangrove/feature_kennel",
-        "processors": "repurposed_structures:outposts/mangrove_cage_pillar",
+        "processors": "all_bark_all_bite:outposts/mangrove_tent_cage_target_pillar",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
