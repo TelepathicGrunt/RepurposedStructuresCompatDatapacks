@@ -152,7 +152,7 @@ subprojects {
                 .GET()
                 .build()
         HttpResponse<String> cfVersionsRawResponse = httpClient.send(cfVersionsRequest, HttpResponse.BodyHandlers.ofString())
-        println "CurseForge Versions Status Code Response: ${cfVersionsRawResponse.statusCode()}"
+        println "CurseForge Versions Status Code Response: ${cfVersionsRawResponse.statusCode()}\r\n"
         String cfVersionsResponse = cfVersionsRawResponse.body()
 
         List<Map<String, String>> curseForgeVersionTypes = slurper.parseText(cfVersionTypesResponse) as List<Map<String, String>>
@@ -168,7 +168,7 @@ subprojects {
             CFMcVersionsToIds[McGameVersion['name']] = McGameVersion['id']
         }
 
-        println "${CFMcVersionsToIds.size()} Minecraft Versions found from CurseForge"
+        println "${CFMcVersionsToIds.size()} Minecraft Versions found from CurseForge\r\n"
 
 
         // Update CurseForge file versions
@@ -213,6 +213,6 @@ subprojects {
                 .method("PATCH", HttpRequest.BodyPublishers.ofString(mrData))
                 .build()
         HttpResponse<Object> modrinthVersionUpdateRawResponse = httpClient.send(modrinthVersionUpdateRequest, HttpResponse.BodyHandlers.ofString())
-        println "Modrinth Version Update Response: ${modrinthVersionUpdateRawResponse.toString()}"
+        println "Modrinth Version Update Response: ${modrinthVersionUpdateRawResponse.toString()}\r\n"
     }
 }
