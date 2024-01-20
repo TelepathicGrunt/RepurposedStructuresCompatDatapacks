@@ -126,8 +126,8 @@ subprojects {
     // UPDATING PUBLISHED VERSIONS SECTION
 
     tasks.register('updateExistingVersioning') {
-        String MR_PATCH_ENDPOINT = "https://api.modrinth.com/v2/version/%s"
-        String CF_POST_ENDPOINT = "https://minecraft.curseforge.com/api/projects/%s/update-file"
+        String MR_PATCH_ENDPOINT = "https://api.modrinth.com/v2/version/${project.latest_mr_file}"
+        String CF_POST_ENDPOINT = "https://minecraft.curseforge.com/api/projects/${project.cf_project_id}/update-file"
         String CF_GAME_VERSION_TYPES_ENDPOINT = "https://minecraft.curseforge.com/api/game/version-types?cache=true"
         String CF_GAME_VERSIONS_ENDPOINT = "https://minecraft.curseforge.com/api/game/versions?cache=true"
         List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
@@ -171,16 +171,14 @@ subprojects {
 
         // Update CurseForge file versions
 
-        String curseforgeProjectId = project.cf_project_id
-        Integer curseforgeFileId = project.latest_cf_file as Integer
         String cfData = JsonOutput.toJson([
-            "fileID": curseforgeFileId,
+            "fileID": project.latest_cf_file as Integer,
             "gameVersions": supportedMinecraftVersionsParsed.collect{ CFMcVersionsToIds[it]}
         ])
 
         String boundary =  "*****"
         HttpRequest curseforgeVersionUpdateRequest = HttpRequest.newBuilder()
-                .uri(new URI(CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)))
+                .uri(new URI(CF_POST_ENDPOINT))
                 .header("Content-Type", "multipart/form-data; boundary=" + boundary)
                 .header("X-Api-Token", env.CURSEFORGEKEY)
                 .POST(HttpRequest.BodyPublishers.ofByteArray(
@@ -199,13 +197,12 @@ subprojects {
 
         // Update Modrinth file versions
 
-        String modrinthFileId = project.latest_mr_file
         String mrData = JsonOutput.toJson([
             "game_versions": supportedMinecraftVersionsParsed.toArray(String[]::new)
         ])
 
         HttpRequest modrinthVersionUpdateRequest = HttpRequest.newBuilder()
-                .uri(new URI(MR_PATCH_ENDPOINT.replace("%s", modrinthFileId)))
+                .uri(new URI(MR_PATCH_ENDPOINT))
                 .header("Content-Type", "application/json")
                 .header("Authorization", env.MODRINTH_TOKEN)
                 .method("PATCH", HttpRequest.BodyPublishers.ofString(mrData))
