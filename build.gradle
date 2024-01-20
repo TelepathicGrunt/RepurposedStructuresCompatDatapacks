@@ -134,21 +134,27 @@ subprojects {
         String CF_GAME_VERSIONS_ENDPOINT = "https://minecraft.curseforge.com/api/game/versions?cache=true"
         List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
 
+        HttpClient httpClient = HttpClient.newBuilder().version(HttpClient.Version.HTTP_2).build()
+
         // Construct the IDs for Minecraft Versions that Curseforge requires. Requires two endpoint's data because why the hell not Curseforge.
-        String cfVersionTypesResponse
-        ((HttpURLConnection)new URL(CF_GAME_VERSION_TYPES_ENDPOINT).openConnection()).with({
-            requestMethod = "GET"
-            doOutput = true
-            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
-            cfVersionTypesResponse = inputStream.text
-        })
-        String cfVersionsResponse
-        ((HttpURLConnection)new URL(CF_GAME_VERSIONS_ENDPOINT).openConnection()).with({
-            requestMethod = "GET"
-            doOutput = true
-            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
-            cfVersionsResponse = inputStream.text
-        })
+        HttpRequest cfVersionTypesRequest = HttpRequest.newBuilder()
+                .uri(new URI(CF_GAME_VERSION_TYPES_ENDPOINT))
+                .header("X-Api-Token", env.CURSEFORGEKEY)
+                .GET()
+                .build()
+        HttpResponse<String> cfVersionTypesRawResponse = httpClient.send(cfVersionTypesRequest, HttpResponse.BodyHandlers.ofString())
+        println "CurseForge Version Types Status Code Response: ${cfVersionTypesRawResponse.statusCode()}"
+        String cfVersionTypesResponse = cfVersionTypesRawResponse.body()
+
+        HttpRequest cfVersionsRequest = HttpRequest.newBuilder()
+                .uri(new URI(CF_GAME_VERSIONS_ENDPOINT))
+                .header("X-Api-Token", env.CURSEFORGEKEY)
+                .GET()
+                .build()
+        HttpResponse<String> cfVersionsRawResponse = httpClient.send(cfVersionsRequest, HttpResponse.BodyHandlers.ofString())
+        println "CurseForge Versions Status Code Response: ${cfVersionsRawResponse.statusCode()}"
+        String cfVersionsResponse = cfVersionsRawResponse.body()
+
         List<Map<String, String>> curseForgeVersionTypes = slurper.parseText(cfVersionTypesResponse) as List<Map<String, String>>
         List<Map<String, String>> curseForgeVersions = slurper.parseText(cfVersionsResponse) as List<Map<String, String>>
 
@@ -162,6 +168,8 @@ subprojects {
             CFMcVersionsToIds[McGameVersion['name']] = McGameVersion['id']
         }
 
+        println "${CFMcVersionsToIds.size()} Minecraft Versions found from CurseForge"
+
 
         // Update CurseForge file versions
 
@@ -173,22 +181,22 @@ subprojects {
         ])
 
         String boundary =  "*****"
-        String curseforgeVersionUpdateResponse
-        ((HttpURLConnection)new URL(CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)).openConnection()).with({
-            requestMethod = "POST"
-            doOutput = true
-            setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary)
-            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
-            outputStream.withPrintWriter({printWriter ->
-                printWriter.write("--${boundary}\r\n")
-                printWriter.write("Content-Disposition: form-data; name=\"metadata\"\r\n")
-                printWriter.write("\r\n")
-                printWriter.write("${cfData}\r\n")
-                printWriter.write("--${boundary}--\r\n")
-            })
-            curseforgeVersionUpdateResponse = "${getResponseCode()} - ${getResponseMessage()}"
-        })
-        println "CurseForge Response: ${curseforgeVersionUpdateResponse}"
+        HttpRequest curseforgeVersionUpdateRequest = HttpRequest.newBuilder()
+                .uri(new URI(CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)))
+                .header("Content-Type", "multipart/form-data; boundary=" + boundary)
+                .header("X-Api-Token", env.CURSEFORGEKEY)
+                .POST(HttpRequest.BodyPublishers.ofByteArray(
+                    (
+                        "--${boundary}\r\n" +
+                        "Content-Disposition: form-data; name=\"metadata\"\r\n" +
+                        "\r\n" +
+                        "${cfData}\r\n" +
+                        "--${boundary}--\r\n"
+                    ).getBytes()
+                ))
+                .build()
+        HttpResponse<Object> curseforgeVersionUpdateRawResponse = httpClient.send(curseforgeVersionUpdateRequest, HttpResponse.BodyHandlers.ofString())
+        println "Curseforge Version Update Response: ${curseforgeVersionUpdateRawResponse.toString()}"
 
 
         // Update Modrinth file versions
@@ -198,18 +206,13 @@ subprojects {
             "game_versions": supportedMinecraftVersionsParsed.toArray(String[]::new)
         ])
 
-        String modrinthVersionUpdateResponse
-        HttpClient httpClient = HttpClient.newBuilder()
-                .version(HttpClient.Version.HTTP_2)
-                .build()
-        HttpRequest request = HttpRequest.newBuilder()
+        HttpRequest modrinthVersionUpdateRequest = HttpRequest.newBuilder()
                 .uri(new URI(MR_PATCH_ENDPOINT.replace("%s", modrinthFileId)))
-                .method("PATCH", HttpRequest.BodyPublishers.ofString(mrData))
                 .header("Content-Type", "application/json")
                 .header("Authorization", env.MODRINTH_TOKEN)
+                .method("PATCH", HttpRequest.BodyPublishers.ofString(mrData))
                 .build()
-        HttpResponse<Object> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString())
-        modrinthVersionUpdateResponse = "${response.statusCode()} - ${response.toString()}"
-        println "Modrinth Response: ${modrinthVersionUpdateResponse}"
+        HttpResponse<Object> modrinthVersionUpdateRawResponse = httpClient.send(modrinthVersionUpdateRequest, HttpResponse.BodyHandlers.ofString())
+        println "Modrinth Version Update Response: ${modrinthVersionUpdateRawResponse.toString()}"
     }
 }
