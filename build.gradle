@@ -2,6 +2,10 @@ import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import groovy.json.StringEscapeUtils
 
+import java.net.http.HttpClient
+import java.net.http.HttpRequest
+import java.net.http.HttpResponse
+
 plugins {
     id "me.modmuss50.mod-publish-plugin" version "0.4.5"
 }
@@ -168,15 +172,7 @@ subprojects {
             "gameVersions": supportedMinecraftVersionsParsed.collect{ CFMcVersionsToIds[it]}
         ])
 
-        String twoHyphens = "--"
         String boundary =  "*****"
-
-        println(twoHyphens + boundary)
-        println("Content-Disposition: form-data; name=\"metadata\"")
-        println("")
-        println(cfData)
-        println(twoHyphens + boundary + twoHyphens)
-
         String curseforgeVersionUpdateResponse
         ((HttpURLConnection)new URL(CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)).openConnection()).with({
             requestMethod = "POST"
@@ -184,11 +180,11 @@ subprojects {
             setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary)
             setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
             outputStream.withPrintWriter({printWriter ->
-                printWriter.write(twoHyphens + boundary)
-                printWriter.write("Content-Disposition: form-data; name=\"metadata\"")
-                printWriter.write("")
-                printWriter.write(cfData)
-                printWriter.write(twoHyphens + boundary + twoHyphens)
+                printWriter.write("--${boundary}\r\n")
+                printWriter.write("Content-Disposition: form-data; name=\"metadata\"\r\n")
+                printWriter.write("\r\n")
+                printWriter.write("${cfData}\r\n")
+                printWriter.write("--${boundary}--\r\n")
             })
             curseforgeVersionUpdateResponse = "${getResponseCode()} - ${getResponseMessage()}"
         })
@@ -198,21 +194,22 @@ subprojects {
         // Update Modrinth file versions
 
         String modrinthFileId = project.latest_mr_file
-        String mrData = StringEscapeUtils.escapeJavaScript(JsonOutput.toJson([
+        String mrData = JsonOutput.toJson([
             "game_versions": supportedMinecraftVersionsParsed.toArray(String[]::new)
-        ]))
+        ])
 
         String modrinthVersionUpdateResponse
-        ((HttpURLConnection)new URL(MR_PATCH_ENDPOINT.replace("%s", modrinthFileId)).openConnection()).with({
-            requestMethod = "PATCH"
-            doOutput = true
-            setRequestProperty("Content-Type", "application/json")
-            setRequestProperty("Authorization", env.MODRINTH_TOKEN)
-            outputStream.withPrintWriter({printWriter ->
-                printWriter.write(mrData)
-            })
-            modrinthVersionUpdateResponse = "${getResponseCode()} - ${getResponseMessage()}"
-        })
+        HttpClient httpClient = HttpClient.newBuilder()
+                .version(HttpClient.Version.HTTP_2)
+                .build()
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI(MR_PATCH_ENDPOINT.replace("%s", modrinthFileId)))
+                .method("PATCH", HttpRequest.BodyPublishers.ofString(mrData))
+                .header("Content-Type", "application/json")
+                .header("Authorization", env.MODRINTH_TOKEN)
+                .build()
+        HttpResponse<Object> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString())
+        modrinthVersionUpdateResponse = "${response.statusCode()} - ${response.toString()}"
         println "Modrinth Response: ${modrinthVersionUpdateResponse}"
     }
 }
