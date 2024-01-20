@@ -131,11 +131,22 @@ subprojects {
         List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
 
         // Construct the IDs for Minecraft Versions that Curseforge requires. Requires two endpoint's data because why the hell not Curseforge.
-        Process cfVersionTypesResponse = "curl -X GET ${CF_GAME_VERSION_TYPES_ENDPOINT} -H \"X-Api-Token:${env.CURSEFORGEKEY}\"".execute()
-        Process cfVersionsResponse = "curl -X GET ${CF_GAME_VERSIONS_ENDPOINT} -H \"X-Api-Token:${env.CURSEFORGEKEY}\"".execute()
-
-        List<Map<String, String>> curseForgeVersionTypes = slurper.parseText(cfVersionTypesResponse.getText()) as List<Map<String, String>>
-        List<Map<String, String>> curseForgeVersions = slurper.parseText(cfVersionsResponse.getText()) as List<Map<String, String>>
+        String cfVersionTypesResponse
+        ((HttpURLConnection)new URL(CF_GAME_VERSION_TYPES_ENDPOINT).openConnection()).with({
+            requestMethod = "GET"
+            doOutput = true
+            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
+            cfVersionTypesResponse = inputStream.text
+        })
+        String cfVersionsResponse
+        ((HttpURLConnection)new URL(CF_GAME_VERSIONS_ENDPOINT).openConnection()).with({
+            requestMethod = "GET"
+            doOutput = true
+            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
+            cfVersionsResponse = inputStream.text
+        })
+        List<Map<String, String>> curseForgeVersionTypes = slurper.parseText(cfVersionTypesResponse) as List<Map<String, String>>
+        List<Map<String, String>> curseForgeVersions = slurper.parseText(cfVersionsResponse) as List<Map<String, String>>
 
         Map<String, String> CFMcVersionsToIds = [:]
         List<Map<String, String>> CfMcVersions = curseForgeVersions.findAll { gv ->
@@ -152,12 +163,36 @@ subprojects {
 
         String curseforgeProjectId = project.cf_project_id
         Integer curseforgeFileId = project.latest_cf_file as Integer
-        String cfData = StringEscapeUtils.escapeJavaScript(JsonOutput.toJson([
+        String cfData = JsonOutput.toJson([
             "fileID": curseforgeFileId,
             "gameVersions": supportedMinecraftVersionsParsed.collect{ CFMcVersionsToIds[it]}
-        ]))
-        Process curseforgeVersionUpdateResponse = "curl -X POST ${CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)} -H \"X-Api-Token:${env.CURSEFORGEKEY}\" -F metadata=${cfData}".execute()
-        println "CurseForge Response: ${curseforgeVersionUpdateResponse.getText()}"
+        ])
+
+        String twoHyphens = "--"
+        String boundary =  "*****"
+
+        println(boundary)
+        println("Content-Disposition: form-data; name=\"metadata\"")
+        println("")
+        println(cfData)
+        println(boundary + twoHyphens)
+
+//        String curseforgeVersionUpdateResponse
+//        ((HttpURLConnection)new URL(CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)).openConnection()).with({
+//            requestMethod = "POST"
+//            doOutput = true
+//            setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary)
+//            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
+//            outputStream.withPrintWriter({printWriter ->
+//                printWriter.write(boundary)
+//                printWriter.write("Content-Disposition: form-data; name=\"metadata\"")
+//                printWriter.write("")
+//                printWriter.write(cfData)
+//                printWriter.write(boundary + twoHyphens)
+//            })
+//            curseforgeVersionUpdateResponse = inputStream.text
+//        })
+//        println "CurseForge Response: ${curseforgeVersionUpdateResponse}"
 
 
         // Update Modrinth file versions
@@ -166,7 +201,18 @@ subprojects {
         String mrData = StringEscapeUtils.escapeJavaScript(JsonOutput.toJson([
             "game_versions": supportedMinecraftVersionsParsed.toArray(String[]::new)
         ]))
-        Process modrinthVersionUpdateResponse = "curl -X PATCH ${MR_PATCH_ENDPOINT.replace("%s", modrinthFileId)} -H \"Content-Type: application/json\" -H \"Authorization: ${env.MODRINTH_TOKEN}\" -d \"${mrData}\"".execute()
-        println "Modrinth Response: ${modrinthVersionUpdateResponse.getText()}"
+
+        String modrinthVersionUpdateResponse
+        ((HttpURLConnection)new URL(MR_PATCH_ENDPOINT.replace("%s", modrinthFileId)).openConnection()).with({
+            requestMethod = "PATCH"
+            doOutput = true
+            setRequestProperty("Content-Type", "application/json")
+            setRequestProperty("Authorization", env.MODRINTH_TOKEN)
+            outputStream.withPrintWriter({printWriter ->
+                printWriter.write(mrData)
+            })
+            modrinthVersionUpdateResponse = "${getResponseCode()} - ${getResponseMessage()}"
+        })
+        println "Modrinth Response: ${modrinthVersionUpdateResponse}"
     }
 }
