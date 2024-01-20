@@ -171,28 +171,28 @@ subprojects {
         String twoHyphens = "--"
         String boundary =  "*****"
 
-        println(boundary)
+        println(twoHyphens + boundary)
         println("Content-Disposition: form-data; name=\"metadata\"")
         println("")
         println(cfData)
-        println(boundary + twoHyphens)
+        println(twoHyphens + boundary + twoHyphens)
 
-//        String curseforgeVersionUpdateResponse
-//        ((HttpURLConnection)new URL(CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)).openConnection()).with({
-//            requestMethod = "POST"
-//            doOutput = true
-//            setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary)
-//            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
-//            outputStream.withPrintWriter({printWriter ->
-//                printWriter.write(boundary)
-//                printWriter.write("Content-Disposition: form-data; name=\"metadata\"")
-//                printWriter.write("")
-//                printWriter.write(cfData)
-//                printWriter.write(boundary + twoHyphens)
-//            })
-//            curseforgeVersionUpdateResponse = inputStream.text
-//        })
-//        println "CurseForge Response: ${curseforgeVersionUpdateResponse}"
+        String curseforgeVersionUpdateResponse
+        ((HttpURLConnection)new URL(CF_POST_ENDPOINT.replace("%s", curseforgeProjectId)).openConnection()).with({
+            requestMethod = "POST"
+            doOutput = true
+            setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary)
+            setRequestProperty("X-Api-Token", env.CURSEFORGEKEY)
+            outputStream.withPrintWriter({printWriter ->
+                printWriter.write(twoHyphens + boundary)
+                printWriter.write("Content-Disposition: form-data; name=\"metadata\"")
+                printWriter.write("")
+                printWriter.write(cfData)
+                printWriter.write(twoHyphens + boundary + twoHyphens)
+            })
+            curseforgeVersionUpdateResponse = "${getResponseCode()} - ${getResponseMessage()}"
+        })
+        println "CurseForge Response: ${curseforgeVersionUpdateResponse}"
 
 
         // Update Modrinth file versions
