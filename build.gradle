@@ -62,7 +62,6 @@ subprojects {
                     curseforge {
                         accessToken = env.CURSEFORGEKEY
 
-                        println "CF ProjectId = ${projectUploadLocationsParsed["CurseForge"]}"
                         projectId = projectUploadLocationsParsed["CurseForge"]
                         supportedMinecraftVersionsParsed.each { supportedMinecraftVersion ->
                             minecraftVersions.add(supportedMinecraftVersion)
