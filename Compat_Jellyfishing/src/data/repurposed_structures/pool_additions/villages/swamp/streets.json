@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/swamp/streets",
+  "fallback": "repurposed_structures:villages/swamp/terminators",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "jellyfishing:villages/swamp/krusty_krab_street",
+        "processors": "repurposed_structures:villages/swamp/path_randomizer",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

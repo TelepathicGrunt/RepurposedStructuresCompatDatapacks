@@ -1,0 +1,12 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "wizards:villages/swamp/wizard_tower",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "wizards:villages/swamp/wizard_tower_2",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

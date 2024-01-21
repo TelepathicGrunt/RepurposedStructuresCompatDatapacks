@@ -1,0 +1,15 @@
+{
+  "name": "bygonenether:jungle/fortress/plant/intersection",
+  "fallback": "bygonenether:jungle/fortress/terminator",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/plant/intersection",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

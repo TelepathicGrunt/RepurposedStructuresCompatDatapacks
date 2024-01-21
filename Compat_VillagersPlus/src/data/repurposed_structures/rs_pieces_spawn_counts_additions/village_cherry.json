@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "villagersplus:villages/cherry/alchemist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/cherry/horticulturist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/cherry/occultist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/cherry/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

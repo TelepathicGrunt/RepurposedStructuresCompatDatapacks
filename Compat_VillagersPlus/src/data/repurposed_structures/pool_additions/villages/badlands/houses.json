@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:villages/badlands/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/badlands/alchemist",
+        "processors": "repurposed_structures:villages/badlands/randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/badlands/horticulturist",
+        "processors": "repurposed_structures:villages/badlands/randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/badlands/occultist",
+        "processors": "repurposed_structures:villages/badlands/randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/badlands/oceanographer",
+        "processors": "repurposed_structures:villages/badlands/randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

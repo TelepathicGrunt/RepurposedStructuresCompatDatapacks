@@ -1,0 +1,15 @@
+{
+  "name": "monobank:villages/mountains/houses",
+  "fallback": "repurposed_structures:villages/mountains/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/mountains/vault",
+        "processors": "monobank:villages/mountains/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

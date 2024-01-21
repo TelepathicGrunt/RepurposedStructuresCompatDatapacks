@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:villages/giant_taiga/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/giant_taiga/alchemist",
+        "processors": "repurposed_structures:villages/giant_taiga/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/giant_taiga/horticulturist",
+        "processors": "repurposed_structures:villages/giant_taiga/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/giant_taiga/occultist",
+        "processors": "repurposed_structures:villages/giant_taiga/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/giant_taiga/oceanographer",
+        "processors": "repurposed_structures:villages/giant_taiga/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

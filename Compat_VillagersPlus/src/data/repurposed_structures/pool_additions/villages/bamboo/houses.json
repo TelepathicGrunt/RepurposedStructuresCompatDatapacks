@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:villages/bamboo/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/bamboo/alchemist",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/bamboo/horticulturist",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/bamboo/occultist",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/bamboo/oceanographer",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "processors": [
+    {
+      "input_block": "minecraft:oak_planks",
+      "output_blocks": [ "minecraft:oak_wood" ],
+      "probability": 1,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "input_block": "minecraft:spruce_fence",
+      "output_blocks": [ "minecraft:oak_fence" ],
+      "probability": 1,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    }
+  ]
+}

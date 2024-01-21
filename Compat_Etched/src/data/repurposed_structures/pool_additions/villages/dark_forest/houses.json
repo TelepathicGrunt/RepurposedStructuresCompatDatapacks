@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/dark_forest/houses",
+  "fallback": "repurposed_structures:villages/dark_forest/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "etched:villages/dark_forest/dark_forest_bard_house_1",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

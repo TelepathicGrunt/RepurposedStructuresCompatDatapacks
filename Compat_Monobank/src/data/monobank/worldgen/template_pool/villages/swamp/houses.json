@@ -1,0 +1,15 @@
+{
+  "name": "monobank:villages/swamp/houses",
+  "fallback": "repurposed_structures:villages/swamp/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location" : "monobank:villages/swamp/vault",
+        "processors": "monobank:villages/swamp/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

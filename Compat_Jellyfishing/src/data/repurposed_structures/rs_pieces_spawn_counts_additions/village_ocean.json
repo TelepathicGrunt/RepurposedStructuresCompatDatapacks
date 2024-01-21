@@ -1,0 +1,12 @@
+{
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "jellyfishing:villages/ocean/krusty_krab_street",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "jellyfishing:villages/ocean/scrap_metal_forge",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

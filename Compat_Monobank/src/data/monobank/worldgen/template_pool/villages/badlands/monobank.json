@@ -1,0 +1,33 @@
+{
+  "name": "monobank:villages/badlands/monobank",
+  "fallback": "monobank:villages/badlands/monobank",
+  "elements": [
+    {
+      "weight": 12,
+      "element": {
+        "location": "monobank:villages/badlands/desert_locked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "monobank:villages/badlands/desert_unlocked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/badlands/empty",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

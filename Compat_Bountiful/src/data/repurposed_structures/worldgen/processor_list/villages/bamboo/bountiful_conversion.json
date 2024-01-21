@@ -1,0 +1,28 @@
+{
+  "processors": [
+    {
+      "input_block": "minecraft:oak_planks",
+      "output_blocks": [ "minecraft:stripped_bamboo_block" ],
+      "probability": 1,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "input_block": "minecraft:spruce_fence",
+      "output_blocks": [ "minecraft:bamboo_fence" ],
+      "probability": 1,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "input_block": "minecraft:spruce_fence_gate",
+      "output_blocks": [ "minecraft:bamboo_fence_gate" ],
+      "probability": 1,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "input_block": "minecraft:oak_slab",
+      "output_blocks": [ "minecraft:bamboo_slab" ],
+      "probability": 1,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    }
+  ]
+}

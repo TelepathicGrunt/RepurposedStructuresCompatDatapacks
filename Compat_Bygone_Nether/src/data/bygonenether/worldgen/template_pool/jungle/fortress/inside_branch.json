@@ -1,0 +1,78 @@
+{
+  "name": "bygonenether:jungle/fortress/inside",
+  "fallback": "bygonenether:jungle/fortress/terminator",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_1",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_2",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_3",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_4",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 18,
+      "element": {
+        "location": "bygonenether:jungle/fortress/straight_inside_long",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "bygonenether:jungle/fortress/stairs_inside_plants",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "bygonenether:jungle/fortress/spawner1",
+        "processors": "bygonenether:jungle/fortress/fortress_keep_chests",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "bygonenether:jungle/fortress/spawner2",
+        "processors": "bygonenether:jungle/fortress/fortress_keep_chests",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

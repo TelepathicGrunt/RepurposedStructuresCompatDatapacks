@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/mountains/houses",
+  "fallback": "repurposed_structures:villages/mountains/terminators",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "location": "bountiful:village/common/bounty_gazebo",
+        "processors": "repurposed_structures:villages/mountains/bountiful_conversion",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

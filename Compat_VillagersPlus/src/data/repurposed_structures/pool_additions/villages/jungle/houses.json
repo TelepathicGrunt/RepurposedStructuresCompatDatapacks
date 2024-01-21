@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:villages/jungle/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/jungle/alchemist",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/jungle/horticulturist",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/jungle/occultist",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/jungle/oceanographer",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

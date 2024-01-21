@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:villages/mushroom/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/mushroom/alchemist",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/mushroom/horticulturist",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/mushroom/occultist",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/mushroom/oceanographer",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

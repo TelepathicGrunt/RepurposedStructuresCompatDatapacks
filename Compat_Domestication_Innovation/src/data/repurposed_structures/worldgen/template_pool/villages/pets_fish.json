@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:villages/pets_fish",
+  "fallback": "repurposed_structures:villages/pets_fish",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "domesticationinnovation:villages/pets/fish/axolotl",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "domesticationinnovation:villages/pets/fish/pufferfish",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "domesticationinnovation:villages/pets/fish/tadpole",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 12,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "domesticationinnovation:villages/pets/fish/tropical_fish",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

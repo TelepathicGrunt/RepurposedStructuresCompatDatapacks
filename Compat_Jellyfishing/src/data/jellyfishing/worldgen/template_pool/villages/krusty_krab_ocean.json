@@ -1,0 +1,15 @@
+{
+  "name": "jellyfishing:villages/krusty_krab_ocean",
+  "fallback": "jellyfishing:villages/krusty_krab_ocean",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "jellyfishing:villages/ocean/krusty_krab",
+        "processors": "jellyfishing:villages/ocean/randomize",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

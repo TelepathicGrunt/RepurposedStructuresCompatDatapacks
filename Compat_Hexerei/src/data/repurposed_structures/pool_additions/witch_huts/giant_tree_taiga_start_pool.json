@@ -1,0 +1,51 @@
+{
+  "name": "repurposed_structures:witch_huts/giant_tree_taiga_start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "hexerei:giant_tree_taiga/witch_hut",
+        "processors": "repurposed_structures:witch_huts/giant_tree_taiga",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "hexerei:giant_tree_taiga/witch_hut2",
+        "processors": "repurposed_structures:witch_huts/giant_tree_taiga",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "hexerei:giant_tree_taiga/witch_hut4",
+        "processors": "hexerei:witch_hut/witch_hut_legs",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "hexerei:giant_tree_taiga/witch_hut6",
+        "processors": "hexerei:witch_hut/witch_hut_legs",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "hexerei:giant_tree_taiga/witch_hut7",
+        "processors": "hexerei:witch_hut/witch_hut_legs",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

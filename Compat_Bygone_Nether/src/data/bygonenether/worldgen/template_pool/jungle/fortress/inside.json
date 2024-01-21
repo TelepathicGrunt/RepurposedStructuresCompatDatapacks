@@ -1,0 +1,75 @@
+{
+  "name": "bygonenether:jungle/fortress/inside",
+  "fallback": "bygonenether:jungle/fortress/terminator",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "bygonenether:jungle/fortress/straight_inside",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "bygonenether:jungle/fortress/4_way_inside",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "bygonenether:jungle/fortress/turn_inside",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "bygonenether:jungle/fortress/turn_inside_chest",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "bygonenether:jungle/fortress/stairs_inside",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "bygonenether:jungle/fortress/stairs_inside_plants",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "bygonenether:jungle/fortress/balcony",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "bygonenether:jungle/fortress/tribridge/arch",
+  "fallback": "bygonenether:jungle/fortress/terminator",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/tribridge/arch",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

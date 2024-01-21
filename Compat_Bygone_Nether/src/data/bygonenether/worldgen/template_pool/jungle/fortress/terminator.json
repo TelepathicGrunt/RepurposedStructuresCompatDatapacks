@@ -1,0 +1,42 @@
+{
+  "name": "bygonenether:jungle/fortress/terminator",
+  "fallback": "bygonenether:jungle/fortress/terminator",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_1",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_2",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_3",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "bygonenether:jungle/fortress/terminator_4",
+        "processors": "bygonenether:jungle/fortress/fortress",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

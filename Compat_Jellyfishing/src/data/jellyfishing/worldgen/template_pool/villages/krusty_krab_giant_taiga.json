@@ -1,0 +1,15 @@
+{
+  "name": "jellyfishing:villages/krusty_krab_giant_taiga",
+  "fallback": "jellyfishing:villages/krusty_krab_giant_taiga",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "jellyfishing:villages/giant_taiga/krusty_krab",
+        "processors": "repurposed_structures:villages/giant_taiga/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

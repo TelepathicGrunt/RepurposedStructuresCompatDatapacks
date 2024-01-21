@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/swamp/houses",
+  "fallback": "repurposed_structures:villages/swamp/terminators",
+  "elements": [
+    {
+      "weight": 12,
+      "element": {
+        "location": "jellyfishing:villages/swamp/scrap_metal_forge",
+        "processors": "repurposed_structures:villages/swamp/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:villages/mushroom/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 6,
+      "element": {
+        "location": "chefsdelight:villages/mushroom/cook_house",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 9,
+      "element": {
+        "location": "chefsdelight:villages/mushroom/chef_house",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

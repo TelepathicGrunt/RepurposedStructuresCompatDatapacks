@@ -1,0 +1,379 @@
+{
+  "processors": [
+    {
+      "processor_type": "repurposed_structures:capped_structure_surface_processor",
+      "delegate": {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "block": "minecraft:stone_bricks",
+              "probability": 0.2,
+              "predicate_type": "minecraft:random_block_match"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "minecraft:gravel"
+            }
+          },
+          {
+            "input_predicate": {
+              "block": "minecraft:cracked_stone_bricks",
+              "probability": 0.2,
+              "predicate_type": "minecraft:random_block_match"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "minecraft:gravel"
+            }
+          },
+          {
+            "input_predicate": {
+              "block": "minecraft:mossy_stone_bricks",
+              "probability": 0.2,
+              "predicate_type": "minecraft:random_block_match"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "minecraft:gravel"
+            }
+          },
+
+          {
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "repurposed_structures:archaeology/fortress_jungle"
+            },
+            "input_predicate": {
+              "block": "minecraft:stone_bricks",
+              "probability": 0.01,
+              "predicate_type": "minecraft:random_block_match"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "minecraft:suspicious_gravel",
+              "Properties": {
+                "dusted": "0"
+              }
+            }
+          },
+          {
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "repurposed_structures:archaeology/fortress_jungle"
+            },
+            "input_predicate": {
+              "block": "minecraft:cracked_stone_bricks",
+              "probability": 0.01,
+              "predicate_type": "minecraft:random_block_match"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "minecraft:suspicious_gravel",
+              "Properties": {
+                "dusted": "0"
+              }
+            }
+          },
+          {
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "repurposed_structures:archaeology/fortress_jungle"
+            },
+            "input_predicate": {
+              "block": "minecraft:mossy_stone_bricks",
+              "probability": 0.01,
+              "predicate_type": "minecraft:random_block_match"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "minecraft:suspicious_gravel",
+              "Properties": {
+                "dusted": "0"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "rules": [
+        {
+          "output_state": {
+            "Name": "minecraft:cave_air"
+          },
+          "input_predicate": {
+            "block": "minecraft:chest",
+            "probability": 0.25,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:campfire",
+            "Properties": {
+              "lit": "false"
+            }
+          },
+          "input_predicate": {
+            "block": "minecraft:campfire",
+            "probability": 0.33,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:brown_mushroom"
+          },
+          "input_predicate": {
+            "block": "minecraft:red_mushroom",
+            "probability": 0.2,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:cave_air"
+          },
+          "input_predicate": {
+            "block": "minecraft:red_mushroom",
+            "probability": 0.5,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:mossy_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:stone_bricks",
+            "probability": 0.33,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:cracked_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:stone_bricks",
+            "probability": 0.3,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:chiseled_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:stone_bricks",
+            "probability": 0.05,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:mossy_stone_bricks",
+            "probability": 0.4,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:cracked_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:mossy_stone_bricks",
+            "probability": 0.4,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:chiseled_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:mossy_stone_bricks",
+            "probability": 0.02,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        }
+      ],
+      "processor_type": "minecraft:rule"
+    },
+    {
+      "rules": [
+        {
+          "output_state": {
+            "Name": "minecraft:infested_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:stone_bricks",
+            "probability": 0.05,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:infested_mossy_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:mossy_stone_bricks",
+            "probability": 0.05,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:infested_cracked_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:cracked_stone_bricks",
+            "probability": 0.05,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:infested_chiseled_stone_bricks"
+          },
+          "input_predicate": {
+            "block": "minecraft:chiseled_stone_bricks",
+            "probability": 0.05,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        }
+      ],
+      "processor_type": "minecraft:rule"
+    },
+    {
+      "input_block": "minecraft:mossy_stone_brick_stairs",
+      "output_block": "minecraft:stone_brick_stairs",
+      "probability": 0.3,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "input_block": "minecraft:stone_brick_stairs",
+      "output_block": "minecraft:mossy_stone_brick_stairs",
+      "probability": 0.3,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "input_block": "minecraft:mossy_stone_brick_wall",
+      "output_block": "minecraft:stone_brick_wall",
+      "probability": 0.3,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "input_block": "minecraft:stone_brick_wall",
+      "output_block": "minecraft:mossy_stone_brick_wall",
+      "probability": 0.3,
+      "processor_type": "repurposed_structures:random_replace_with_properties_processor"
+    },
+    {
+      "processor_type": "repurposed_structures:pillar_processor",
+      "direction": "DOWN",
+      "processor_list": "bygonenether:jungle/fortress/fortress",
+      "pillar_trigger_and_replacements": [
+        {
+          "trigger" : {
+            "Name": "minecraft:red_wool"
+          },
+          "replacement" : {
+            "Name": "minecraft:stone_bricks"
+          }
+        }
+      ]
+    },
+    {
+      "processor_type": "repurposed_structures:pillar_processor",
+      "direction": "DOWN",
+      "processor_list": "bygonenether:jungle/fortress/fortress",
+      "pillar_trigger_and_replacements": [
+        {
+          "trigger" : {
+            "Name": "minecraft:black_wool"
+          },
+          "replacement" : {
+            "Name": "minecraft:cracked_stone_bricks"
+          }
+        }
+      ]
+    },
+    {
+      "processor_type": "repurposed_structures:spawner_randomizing_processor",
+      "rs_spawner_resourcelocation": "repurposed_structures:fortresses/jungle",
+      "valid_block_light_level": {
+        "min_inclusive": 0,
+        "max_inclusive": 7
+      }
+    },
+    {
+      "processor_type": "repurposed_structures:remove_floating_blocks_processor"
+    },
+    {
+      "flood_level": 62,
+      "processor_type": "repurposed_structures:flood_with_water_processor"
+    },
+    {
+      "processor_type": "repurposed_structures:waterlogging_fix_processor"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "villagersplus:villages/jungle/alchemist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/jungle/horticulturist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/jungle/occultist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/jungle/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

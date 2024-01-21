@@ -1,0 +1,15 @@
+{
+  "name": "jellyfishing:villages/krusty_krab_birch",
+  "fallback": "jellyfishing:villages/krusty_krab_birch",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "jellyfishing:villages/birch/krusty_krab",
+        "processors": "repurposed_structures:villages/birch/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

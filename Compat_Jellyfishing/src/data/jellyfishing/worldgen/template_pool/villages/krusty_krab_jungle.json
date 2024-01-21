@@ -1,0 +1,15 @@
+{
+  "name": "jellyfishing:villages/krusty_krab_jungle",
+  "fallback": "jellyfishing:villages/krusty_krab_jungle",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "jellyfishing:villages/jungle/krusty_krab",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "monobank:villages/oak/houses",
+  "fallback": "repurposed_structures:villages/oak/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/oak/vault",
+        "processors": "monobank:villages/oak/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

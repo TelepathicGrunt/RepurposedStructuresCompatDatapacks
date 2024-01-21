@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "villagersplus:villages/bamboo/alchemist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/bamboo/horticulturist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/bamboo/occultist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/bamboo/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:villages/dark_forest/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/dark_forest/alchemist",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/dark_forest/horticulturist",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/dark_forest/occultist",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "villagersplus:villages/dark_forest/oceanographer",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

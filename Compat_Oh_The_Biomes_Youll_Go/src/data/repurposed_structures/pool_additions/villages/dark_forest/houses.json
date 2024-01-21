@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/dark_forest/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 8,
+      "element": {
+        "location": "byg:villages/dark_forest/forager",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

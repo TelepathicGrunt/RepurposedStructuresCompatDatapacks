@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/bamboo/streets",
+  "fallback": "repurposed_structures:villages/bamboo/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "monobank:villages/bamboo/straight_fix_01",
+        "processors": "repurposed_structures:villages/bamboo/path_randomizer",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

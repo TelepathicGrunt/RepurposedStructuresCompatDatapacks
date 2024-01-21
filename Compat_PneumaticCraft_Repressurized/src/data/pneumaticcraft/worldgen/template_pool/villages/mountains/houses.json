@@ -1,0 +1,15 @@
+{
+  "name": "pneumaticcraft:villages/mountains/houses",
+  "fallback": "repurposed_structures:villages/mountains/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "pneumaticcraft:villages/mountains/mechanic_house",
+        "processors": "repurposed_structures:villages/mountains/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

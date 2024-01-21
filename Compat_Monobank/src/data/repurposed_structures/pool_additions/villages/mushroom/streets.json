@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/mushroom/streets",
+  "fallback": "repurposed_structures:villages/mushroom/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "monobank:villages/mushroom/straight_fix_01",
+        "processors": "repurposed_structures:villages/mushroom/path_randomizer",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "jellyfishing:villages/krusty_krab_mushroom",
+  "fallback": "jellyfishing:villages/krusty_krab_mushroom",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "jellyfishing:villages/mushroom/krusty_krab",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

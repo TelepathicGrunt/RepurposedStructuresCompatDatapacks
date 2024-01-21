@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/ocean/streets",
+  "fallback": "repurposed_structures:villages/ocean/terminators",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "jellyfishing:villages/ocean/krusty_krab_street",
+        "processors": "repurposed_structures:villages/ocean/path_randomizer",
+        "projection": "rigid",
+        "element_type": "repurposed_structures:legacy_ocean_bottom_single_pool_element"
+      }
+    }
+  ]
+}

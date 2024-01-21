@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "description": "Repurposed Structures - ${mod_dependency_name} v${mod_version}",
+    "pack_format": 15
+  }
+}

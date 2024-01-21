@@ -1,0 +1,12 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "monobank:villages/swamp/vault",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "monobank:villages/swamp/straight_fix_01",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

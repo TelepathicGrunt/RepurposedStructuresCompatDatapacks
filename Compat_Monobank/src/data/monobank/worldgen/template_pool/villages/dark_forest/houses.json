@@ -1,0 +1,15 @@
+{
+  "name": "monobank:villages/dark_forest/houses",
+  "fallback": "repurposed_structures:villages/dark_forest/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/dark_forest/vault",
+        "processors": "monobank:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

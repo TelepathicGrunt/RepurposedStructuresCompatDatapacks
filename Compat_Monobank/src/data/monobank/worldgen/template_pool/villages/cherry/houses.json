@@ -1,0 +1,15 @@
+{
+  "name": "monobank:villages/cherry/houses",
+  "fallback": "repurposed_structures:villages/cherry/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/cherry/vault",
+        "processors": "monobank:villages/cherry/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

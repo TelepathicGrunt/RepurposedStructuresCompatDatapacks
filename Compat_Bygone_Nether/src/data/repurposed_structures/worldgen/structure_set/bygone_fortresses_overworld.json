@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "repurposed_structures:fortress_jungle_bygone",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "repurposed_structures:advanced_random_spread",
+    "salt": 198747080,
+    "spacing": 51,
+    "separation": 35
+  }
+}

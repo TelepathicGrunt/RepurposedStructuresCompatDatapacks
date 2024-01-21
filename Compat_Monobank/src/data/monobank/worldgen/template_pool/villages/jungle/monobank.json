@@ -1,0 +1,33 @@
+{
+  "name": "monobank:villages/jungle/monobank",
+  "fallback": "monobank:villages/jungle/monobank",
+  "elements": [
+    {
+      "weight": 12,
+      "element": {
+        "location": "monobank:villages/jungle/desert_locked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "monobank:villages/jungle/desert_unlocked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/jungle/empty",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/birch/streets",
+  "fallback": "repurposed_structures:villages/birch/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "monobank:villages/birch/straight_fix_01",
+        "processors": "repurposed_structures:villages/birch/path_randomizer",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

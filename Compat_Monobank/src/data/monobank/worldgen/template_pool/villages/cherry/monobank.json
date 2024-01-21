@@ -1,0 +1,33 @@
+{
+  "name": "monobank:villages/cherry/monobank",
+  "fallback": "monobank:villages/cherry/monobank",
+  "elements": [
+    {
+      "weight": 12,
+      "element": {
+        "location": "monobank:villages/cherry/desert_locked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "monobank:villages/cherry/desert_unlocked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/cherry/empty",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

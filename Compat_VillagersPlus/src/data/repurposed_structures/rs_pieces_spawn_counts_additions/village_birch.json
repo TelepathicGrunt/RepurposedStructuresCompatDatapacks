@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "villagersplus:villages/birch/alchemist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/birch/horticulturist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/birch/occultist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/birch/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

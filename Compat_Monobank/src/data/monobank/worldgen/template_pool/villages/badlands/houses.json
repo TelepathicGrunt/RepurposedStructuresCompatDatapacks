@@ -1,0 +1,15 @@
+{
+  "name": "monobank:villages/badlands/houses",
+  "fallback": "repurposed_structures:villages/badlands/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location" : "monobank:villages/badlands/vault",
+        "processors": "monobank:villages/badlands/randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

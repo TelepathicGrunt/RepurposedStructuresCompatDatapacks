@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "villagersplus:villages/badlands/alchemist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/badlands/horticulturist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/badlands/occultist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "villagersplus:villages/badlands/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

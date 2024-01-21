@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:villages/pets_trapdoor_cage",
+  "fallback": "repurposed_structures:villages/pets_trapdoor_cage",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "domesticationinnovation:villages/pets/parrot",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "domesticationinnovation:villages/pets/frog",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "monobank:villages/swamp/monobank",
+  "fallback": "monobank:villages/swamp/monobank",
+  "elements": [
+    {
+      "weight": 12,
+      "element": {
+        "location": "monobank:villages/swamp/desert_locked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "monobank:villages/swamp/desert_unlocked",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "monobank:villages/swamp/empty",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

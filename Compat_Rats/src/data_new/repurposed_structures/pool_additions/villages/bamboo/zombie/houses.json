@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:villages/bamboo/zombie/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "rats:villages/bamboo/garbage_heap",
+        "processors": "repurposed_structures:villages/bamboo/zombify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "rats:villages/bamboo/zombie_pet_shop",
+        "processors": "repurposed_structures:villages/bamboo/zombify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}
