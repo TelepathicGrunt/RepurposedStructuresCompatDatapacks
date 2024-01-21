@@ -18,30 +18,32 @@ subprojects {
     apply plugin: "me.modmuss50.mod-publish-plugin"
 
     tasks.register('createJar', Zip) {
-        outputs.upToDateWhen { false }
+        doLast {
+            outputs.upToDateWhen { false }
 
-        String fileSource = "src"
-        String fileModid = project.mod_id
-        String fileDependencyModName = project.mod_dependency_name
-        if (project.hasProperty('do_alternative_source_upload') && project.do_alternative_source_upload as Boolean) {
-            fileSource = project.alternative_source_file
-            fileModid = project.alternative_mod_id
-            fileDependencyModName = project.alternative_mod_dependency_name
-        }
+            String fileSource = "src"
+            String fileModid = project.mod_id
+            String fileDependencyModName = project.mod_dependency_name
+            if (project.hasProperty('do_alternative_source_upload') && project.do_alternative_source_upload as Boolean) {
+                fileSource = project.alternative_source_file
+                fileModid = project.alternative_mod_id
+                fileDependencyModName = project.alternative_mod_dependency_name
+            }
 
-        from "$projectDir/${fileSource}"
-        archiveFileName = "${fileModid}_v${project.mod_version}.jar"
-        destinationDirectory = file("$projectDir/built")
+            from "$projectDir/${fileSource}"
+            archiveFileName = "${fileModid}_v${project.mod_version}.jar"
+            destinationDirectory = file("$projectDir/built")
 
-        filesMatching(['META-INF/mods.toml', 'fabric.mod.json', 'pack.mcmeta']) {
-            filter {
-                it.replace("\${mod_id}", "${fileModid}")
-                    .replace("\${mod_dependency_name}", "${fileDependencyModName}")
-                    .replace("\${mod_dependency_mod_id}", "${project.mod_dependency_mod_id}")
-                    .replace("\${mod_authors}", "${project.mod_authors}")
-                    .replace("\${mod_license}", "${project.mod_license}")
-                    .replace("\${mod_version}", "${project.mod_version}")
-                    .replace("\${minecraft_version}", "${project.minecraft_version}")
+            filesMatching(['META-INF/mods.toml', 'fabric.mod.json', 'pack.mcmeta']) {
+                filter {
+                    it.replace("\${mod_id}", "${fileModid}")
+                            .replace("\${mod_dependency_name}", "${fileDependencyModName}")
+                            .replace("\${mod_dependency_mod_id}", "${project.mod_dependency_mod_id}")
+                            .replace("\${mod_authors}", "${project.mod_authors}")
+                            .replace("\${mod_license}", "${project.mod_license}")
+                            .replace("\${mod_version}", "${project.mod_version}")
+                            .replace("\${minecraft_version}", "${project.minecraft_version}")
+                }
             }
         }
     }
@@ -140,88 +142,102 @@ subprojects {
     // UPDATING PUBLISHED VERSIONS SECTION
 
     tasks.register('updateExistingVersioning') {
-        String MR_PATCH_ENDPOINT = "https://api.modrinth.com/v2/version/${project.latest_mr_file}"
-        String CF_POST_ENDPOINT = "https://minecraft.curseforge.com/api/projects/${project.cf_project_id}/update-file"
-        String CF_GAME_VERSION_TYPES_ENDPOINT = "https://minecraft.curseforge.com/api/game/version-types?cache=true"
-        String CF_GAME_VERSIONS_ENDPOINT = "https://minecraft.curseforge.com/api/game/versions?cache=true"
-        List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
+        doLast {
+            println "Updating project: ${mod_dependency_name} - ${project.mod_id}\r\n"
 
-        HttpClient httpClient = HttpClient.newBuilder().version(HttpClient.Version.HTTP_2).build()
-
-        // Construct the IDs for Minecraft Versions that Curseforge requires. Requires two endpoint's data because why the hell not Curseforge.
-        HttpRequest cfVersionTypesRequest = HttpRequest.newBuilder()
-                .uri(new URI(CF_GAME_VERSION_TYPES_ENDPOINT))
-                .header("X-Api-Token", env.CURSEFORGEKEY)
-                .GET()
-                .build()
-        HttpResponse<String> cfVersionTypesRawResponse = httpClient.send(cfVersionTypesRequest, HttpResponse.BodyHandlers.ofString())
-        println "CurseForge Version Types Status Code Response: ${cfVersionTypesRawResponse.statusCode()}"
-        String cfVersionTypesResponse = cfVersionTypesRawResponse.body()
-
-        HttpRequest cfVersionsRequest = HttpRequest.newBuilder()
-                .uri(new URI(CF_GAME_VERSIONS_ENDPOINT))
-                .header("X-Api-Token", env.CURSEFORGEKEY)
-                .GET()
-                .build()
-        HttpResponse<String> cfVersionsRawResponse = httpClient.send(cfVersionsRequest, HttpResponse.BodyHandlers.ofString())
-        println "CurseForge Versions Status Code Response: ${cfVersionsRawResponse.statusCode()}\r\n"
-        String cfVersionsResponse = cfVersionsRawResponse.body()
-
-        List<Map<String, String>> curseForgeVersionTypes = slurper.parseText(cfVersionTypesResponse) as List<Map<String, String>>
-        List<Map<String, String>> curseForgeVersions = slurper.parseText(cfVersionsResponse) as List<Map<String, String>>
-
-        Map<String, String> CFMcVersionsToIds = [:]
-        List<Map<String, String>> CfMcVersions = curseForgeVersions.findAll { gv ->
-            curseForgeVersionTypes.any { gvt ->
-                gv['gameVersionTypeID'] == gvt['id']
+            if (!(project.hasProperty('cf_project_id') && project.cf_project_id &&
+                project.hasProperty('latest_cf_file') && project.latest_cf_file &&
+                project.hasProperty('latest_mr_file') && project.latest_mr_file))
+            {
+                println "No files were specified to update versioning on. Please specify both a CurseForge and Modrinth file to update."
+                return
             }
+
+            String MR_PATCH_ENDPOINT = "https://api.modrinth.com/v2/version/${project.latest_mr_file}"
+            String CF_POST_ENDPOINT = "https://minecraft.curseforge.com/api/projects/${project.cf_project_id}/update-file"
+            String CF_GAME_VERSION_TYPES_ENDPOINT = "https://minecraft.curseforge.com/api/game/version-types?cache=true"
+            String CF_GAME_VERSIONS_ENDPOINT = "https://minecraft.curseforge.com/api/game/versions?cache=true"
+            List<String> supportedMinecraftVersionsParsed = slurper.parseText(project.supported_minecraft_versions) as List<String>
+
+            HttpClient httpClient = HttpClient.newBuilder().version(HttpClient.Version.HTTP_2).build()
+
+            // Construct the IDs for Minecraft Versions that Curseforge requires. Requires two endpoint's data because why the hell not Curseforge.
+            HttpRequest cfVersionTypesRequest = HttpRequest.newBuilder()
+                    .uri(new URI(CF_GAME_VERSION_TYPES_ENDPOINT))
+                    .header("X-Api-Token", env.CURSEFORGEKEY)
+                    .GET()
+                    .build()
+            HttpResponse<String> cfVersionTypesRawResponse = httpClient.send(cfVersionTypesRequest, HttpResponse.BodyHandlers.ofString())
+            println "CurseForge Version Types Status Code Response: ${cfVersionTypesRawResponse.statusCode()}"
+            String cfVersionTypesResponse = cfVersionTypesRawResponse.body()
+
+            HttpRequest cfVersionsRequest = HttpRequest.newBuilder()
+                    .uri(new URI(CF_GAME_VERSIONS_ENDPOINT))
+                    .header("X-Api-Token", env.CURSEFORGEKEY)
+                    .GET()
+                    .build()
+            HttpResponse<String> cfVersionsRawResponse = httpClient.send(cfVersionsRequest, HttpResponse.BodyHandlers.ofString())
+            println "CurseForge Versions Status Code Response: ${cfVersionsRawResponse.statusCode()}\r\n"
+            String cfVersionsResponse = cfVersionsRawResponse.body()
+
+            List<Map<String, String>> curseForgeVersionTypes = slurper.parseText(cfVersionTypesResponse) as List<Map<String, String>>
+            List<Map<String, String>> curseForgeVersions = slurper.parseText(cfVersionsResponse) as List<Map<String, String>>
+
+            Map<String, String> CFMcVersionsToIds = [:]
+            List<Map<String, String>> CfMcVersions = curseForgeVersions.findAll { gv ->
+                curseForgeVersionTypes.any { gvt ->
+                    gv['gameVersionTypeID'] == gvt['id']
+                }
+            }
+            for (McGameVersion in CfMcVersions) {
+                CFMcVersionsToIds[McGameVersion['name']] = McGameVersion['id']
+            }
+
+            println "${CFMcVersionsToIds.size()} Minecraft Versions found from CurseForge\r\n"
+
+
+            // Update CurseForge file versions
+
+            String cfData = JsonOutput.toJson([
+                    "fileID"      : project.latest_cf_file as Integer,
+                    "gameVersions": supportedMinecraftVersionsParsed.collect { CFMcVersionsToIds[it] }
+            ])
+
+            String boundary = "*****"
+            HttpRequest curseforgeVersionUpdateRequest = HttpRequest.newBuilder()
+                    .uri(new URI(CF_POST_ENDPOINT))
+                    .header("Content-Type", "multipart/form-data; boundary=" + boundary)
+                    .header("X-Api-Token", env.CURSEFORGEKEY)
+                    .POST(HttpRequest.BodyPublishers.ofByteArray(
+                            (
+                                    "--${boundary}\r\n" +
+                                            "Content-Disposition: form-data; name=\"metadata\"\r\n" +
+                                            "\r\n" +
+                                            "${cfData}\r\n" +
+                                            "--${boundary}--\r\n"
+                            ).getBytes()
+                    ))
+                    .build()
+            HttpResponse<Object> curseforgeVersionUpdateRawResponse = httpClient.send(curseforgeVersionUpdateRequest, HttpResponse.BodyHandlers.ofString())
+            println "Curseforge Version Update Response: ${curseforgeVersionUpdateRawResponse.toString()}"
+
+
+            // Update Modrinth file versions
+
+            String mrData = JsonOutput.toJson([
+                    "game_versions": supportedMinecraftVersionsParsed.toArray(String[]::new)
+            ])
+
+            HttpRequest modrinthVersionUpdateRequest = HttpRequest.newBuilder()
+                    .uri(new URI(MR_PATCH_ENDPOINT))
+                    .header("Content-Type", "application/json")
+                    .header("Authorization", env.MODRINTH_TOKEN)
+                    .method("PATCH", HttpRequest.BodyPublishers.ofString(mrData))
+                    .build()
+            HttpResponse<Object> modrinthVersionUpdateRawResponse = httpClient.send(modrinthVersionUpdateRequest, HttpResponse.BodyHandlers.ofString())
+            println "Modrinth Version Update Response: ${modrinthVersionUpdateRawResponse.toString()}\r\n"
+
+            println "-----------------------------------\r\n"
         }
-        for (McGameVersion in CfMcVersions) {
-            CFMcVersionsToIds[McGameVersion['name']] = McGameVersion['id']
-        }
-
-        println "${CFMcVersionsToIds.size()} Minecraft Versions found from CurseForge\r\n"
-
-
-        // Update CurseForge file versions
-
-        String cfData = JsonOutput.toJson([
-            "fileID": project.latest_cf_file as Integer,
-            "gameVersions": supportedMinecraftVersionsParsed.collect{ CFMcVersionsToIds[it]}
-        ])
-
-        String boundary =  "*****"
-        HttpRequest curseforgeVersionUpdateRequest = HttpRequest.newBuilder()
-                .uri(new URI(CF_POST_ENDPOINT))
-                .header("Content-Type", "multipart/form-data; boundary=" + boundary)
-                .header("X-Api-Token", env.CURSEFORGEKEY)
-                .POST(HttpRequest.BodyPublishers.ofByteArray(
-                    (
-                        "--${boundary}\r\n" +
-                        "Content-Disposition: form-data; name=\"metadata\"\r\n" +
-                        "\r\n" +
-                        "${cfData}\r\n" +
-                        "--${boundary}--\r\n"
-                    ).getBytes()
-                ))
-                .build()
-        HttpResponse<Object> curseforgeVersionUpdateRawResponse = httpClient.send(curseforgeVersionUpdateRequest, HttpResponse.BodyHandlers.ofString())
-        println "Curseforge Version Update Response: ${curseforgeVersionUpdateRawResponse.toString()}"
-
-
-        // Update Modrinth file versions
-
-        String mrData = JsonOutput.toJson([
-            "game_versions": supportedMinecraftVersionsParsed.toArray(String[]::new)
-        ])
-
-        HttpRequest modrinthVersionUpdateRequest = HttpRequest.newBuilder()
-                .uri(new URI(MR_PATCH_ENDPOINT))
-                .header("Content-Type", "application/json")
-                .header("Authorization", env.MODRINTH_TOKEN)
-                .method("PATCH", HttpRequest.BodyPublishers.ofString(mrData))
-                .build()
-        HttpResponse<Object> modrinthVersionUpdateRawResponse = httpClient.send(modrinthVersionUpdateRequest, HttpResponse.BodyHandlers.ofString())
-        println "Modrinth Version Update Response: ${modrinthVersionUpdateRawResponse.toString()}\r\n"
     }
 }
