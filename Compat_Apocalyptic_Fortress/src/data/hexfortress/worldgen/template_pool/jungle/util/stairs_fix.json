@@ -1,0 +1,15 @@
+{
+  "name": "hexfortress:jungle/util/stairs_fix",
+  "fallback": "hexfortress:jungle/util/stairs_fix",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/util/stairs_fix",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    }
+  ]
+}

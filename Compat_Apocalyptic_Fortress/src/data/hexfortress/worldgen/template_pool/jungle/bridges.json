@@ -1,0 +1,60 @@
+{
+  "name": "hexfortress:jungle/bridges",
+  "fallback": "hexfortress:jungle/bridge_end",
+  "elements": [
+    {
+      "weight": 120,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/bridge/straight",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 30,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/bridge/straight_broken",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile"
+      }
+    },
+    {
+      "weight": 40,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/bridge/cross",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/bridge/cross_broken",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/stairs/high_middle_cross",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/stairs/high_middle_straight",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    }
+  ]
+}

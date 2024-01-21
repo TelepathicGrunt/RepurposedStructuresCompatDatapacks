@@ -1,0 +1,15 @@
+{
+  "name": "hexfortress:jungle/interior_entrance",
+  "fallback": "hexfortress:jungle/interior_entrance",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/center",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_less_center"
+      }
+    }
+  ]
+}

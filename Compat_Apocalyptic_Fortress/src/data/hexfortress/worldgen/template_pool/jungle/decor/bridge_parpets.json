@@ -1,0 +1,85 @@
+{
+  "name": "hexfortress:jungle/decor/bridge_parpets",
+  "fallback": "hexfortress:jungle/decor/bridge_parpets",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/chest",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/pot",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/explosive_barrel",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/broken_short",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/broken_long",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/random_objects_long",
+        "processors": "hexfortress:jungle/decor/pots_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/random_objects_long",
+        "processors": "hexfortress:jungle/decor/explosive_barrels_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_parpet/lamp",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 24,
+      "element": {
+        "element_type": "minecraft:empty_pool_element",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

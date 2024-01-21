@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:pyramids/original/nether",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "repurposed_structures:pyramids/nether",
+        "processors": "repurposed_structures:pyramids/nether",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

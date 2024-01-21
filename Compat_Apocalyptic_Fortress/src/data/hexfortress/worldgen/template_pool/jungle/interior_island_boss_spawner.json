@@ -1,0 +1,15 @@
+{
+  "name": "hexfortress:jungle/interior_island_boss_spawner",
+  "fallback": "hexfortress:jungle/interior_island_boss_spawner",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island/boss_spawner",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    }
+  ]
+}

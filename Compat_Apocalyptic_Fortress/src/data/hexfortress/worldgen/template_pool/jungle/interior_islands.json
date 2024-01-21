@@ -1,0 +1,33 @@
+{
+  "name": "hexfortress:jungle/interior_islands",
+  "fallback": "hexfortress:jungle/interior_islands",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island/short",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island/medium",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island/long",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    }
+  ]
+}

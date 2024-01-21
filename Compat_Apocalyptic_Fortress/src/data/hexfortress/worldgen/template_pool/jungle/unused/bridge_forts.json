@@ -1,0 +1,15 @@
+{
+  "name": "hexfortress:jungle/bridge_forts",
+  "fallback": "hexfortress:jungle/bridge_forts",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/bridge_fort/17x7",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    }
+  ]
+}

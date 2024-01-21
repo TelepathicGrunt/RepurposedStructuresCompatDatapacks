@@ -1,0 +1,51 @@
+{
+  "name": "hexfortress:jungle/forts",
+  "fallback": "hexfortress:jungle/fort_end",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/fort/2x3",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/fort/3x3",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/fort/end_straight",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/fort/end_right",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/fort/end_left",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    }
+  ]
+}

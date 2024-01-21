@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "repurposed_structures:original/pyramid_nether",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1133354684,
+    "spacing": 45,
+    "separation": 23,
+    "type": "repurposed_structures:advanced_random_spread",
+    "super_exclusion_zone": {
+      "chunk_count": 5,
+      "other_set": "#repurposed_structures:collections/modified_pyramids"
+    }
+  }
+}

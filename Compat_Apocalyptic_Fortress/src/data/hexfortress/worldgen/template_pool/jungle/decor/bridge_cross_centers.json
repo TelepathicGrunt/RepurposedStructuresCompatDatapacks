@@ -1,0 +1,22 @@
+{
+  "name": "hexfortress:jungle/decor/bridge_cross_centers",
+  "fallback": "hexfortress:jungle/decor/bridge_cross_centers",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/bridge_center/crossroad_hut",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:empty_pool_element",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

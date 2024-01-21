@@ -1,0 +1,105 @@
+{
+  "name": "hexfortress:jungle/island_types",
+  "fallback": "hexfortress:jungle/island_types",
+  "elements": [
+    {
+      "weight": 50,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/basic",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/blaze_spawner",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/chest",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/explosive",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/explosive_barrels",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/gold",
+        "processors": "hexfortress:jungle/decor/random_gold_ingot_pile_center"
+      }
+    },
+    {
+      "weight": 8,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/upsidedown",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 15,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/lantern",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 8,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/large",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/diamond",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/interior/island_type/ancient_debris",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    }
+  ]
+}

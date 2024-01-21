@@ -1,0 +1,31 @@
+{
+  "name": "hexfortress:jungle/decor/stair_4_steps",
+  "fallback": "hexfortress:jungle/decor/stair_4_steps",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/stair_step/random_objects_4_steps",
+        "processors": "hexfortress:jungle/decor/pots_30"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/stair_step/random_objects_4_steps",
+        "processors": "hexfortress:jungle/decor/explosive_barrels_30"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:empty_pool_element",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "hexfortress:jungle/middle_bridges",
+  "fallback": "hexfortress:jungle/middle_bridge_end",
+  "elements": [
+    {
+      "weight": 120,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/middle_bridge/straight",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 30,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/middle_bridge/straight_broken",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile"
+      }
+    },
+    {
+      "weight": 40,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/middle_bridge/cross",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/middle_bridge/cross_broken",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile"
+      }
+    }
+  ]
+}

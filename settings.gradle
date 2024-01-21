@@ -7,6 +7,15 @@ pluginManagement {
 
 plugins {}
 
+include 'Compat_Advanced_Peripherals'
 include 'Compat_All_Bark_All_Bite'
+include 'Compat_Apocalyptic_Fortress'
 include 'Compat_Biome_Makeover'
 include 'Compat_Friends_And_Foes'
+include 'Compat_Yungs_Better_Desert_Temples'
+include 'Compat_Yungs_Better_Dungeons'
+include 'Compat_Yungs_Better_Jungle_Temples'
+include 'Compat_Yungs_Better_Monuments'
+include 'Compat_Yungs_Better_Nether_Fortress'
+include 'Compat_Yungs_Better_Strongholds'
+include 'Compat_Yungs_Better_Witch_Huts'

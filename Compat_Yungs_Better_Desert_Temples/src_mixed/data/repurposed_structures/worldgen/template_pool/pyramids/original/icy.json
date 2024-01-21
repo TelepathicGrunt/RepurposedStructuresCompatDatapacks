@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:pyramids/original/icy",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "repurposed_structures:pyramids/icy_body",
+        "processors": "repurposed_structures:pyramids/icy",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

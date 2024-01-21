@@ -20,14 +20,23 @@ subprojects {
     tasks.register('createJar', Zip) {
         outputs.upToDateWhen { false }
 
-        from "$projectDir/src"
-        archiveFileName = "${project.mod_id}_v${project.mod_version}.jar"
+        String fileSource = "src"
+        String fileModid = project.mod_id
+        String fileDependencyModName = project.mod_dependency_name
+        if (project.hasProperty('do_alternative_source_upload') && project.do_alternative_source_upload as Boolean) {
+            fileSource = project.alternative_source_file
+            fileModid = project.alternative_mod_id
+            fileDependencyModName = project.alternative_mod_dependency_name
+        }
+
+        from "$projectDir/${fileSource}"
+        archiveFileName = "${fileModid}_v${project.mod_version}.jar"
         destinationDirectory = file("$projectDir/built")
 
         filesMatching(['META-INF/mods.toml', 'fabric.mod.json', 'pack.mcmeta']) {
             filter {
-                it.replace("\${mod_id}", "${project.mod_id}")
-                    .replace("\${mod_dependency_name}", "${project.mod_dependency_name}")
+                it.replace("\${mod_id}", "${fileModid}")
+                    .replace("\${mod_dependency_name}", "${fileDependencyModName}")
                     .replace("\${mod_dependency_mod_id}", "${project.mod_dependency_mod_id}")
                     .replace("\${mod_authors}", "${project.mod_authors}")
                     .replace("\${mod_license}", "${project.mod_license}")
@@ -52,13 +61,18 @@ subprojects {
 
         if (projectUploadLocationsParsed != null && loadersParsed != null) {
 
+            String fileDependencyModName = project.mod_dependency_name
+            if (project.hasProperty('do_alternative_source_upload') && project.do_alternative_source_upload as Boolean) {
+                fileDependencyModName = project.alternative_mod_dependency_name
+            }
+
             File changeLog = rootProject.file("CHANGELOG.md")
             String changeLogText = changeLog.exists() ? changeLog.text : ""
 
             publishMods {
                 file = tasks.createJar.archiveFile
 
-                displayName  = "Repurposed Structures - ${project.mod_dependency_name} Compat"
+                displayName  = "Repurposed Structures - ${fileDependencyModName} Compat"
                 type = STABLE
 
                 changelog = changeLogText

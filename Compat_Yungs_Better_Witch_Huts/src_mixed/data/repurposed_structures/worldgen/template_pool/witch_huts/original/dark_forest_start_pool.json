@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:witch_huts/original/dark_forest_start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "repurposed_structures:witch_huts/dark_forest",
+        "processors": "repurposed_structures:witch_huts/dark_forest",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

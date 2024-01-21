@@ -1,0 +1,96 @@
+{
+  "name": "hexfortress:jungle/decor/interior_floors",
+  "fallback": "hexfortress:jungle/decor/interior_floors",
+  "elements": [
+    {
+      "weight": 9,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/basic",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/broken",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/divider_fence",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/divider_wall",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/soul_sand_1",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/soul_sand_2",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/soul_sand_3",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/wither_bush_1",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/wither_bush_2",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_floor/wither_bush_3",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_center"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "hexfortress:jungle/decor/lava_parkours",
+  "fallback": "hexfortress:jungle/decor/lava_parkours",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/lava_parkour/magma_path",
+        "processors": "hexfortress:jungle/decor/magma_block_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/lava_parkour/blaze_spawner",
+        "processors": "hexfortress:jungle/decor/explosive_barrels_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/lava_parkour/bridge",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    }
+  ]
+}

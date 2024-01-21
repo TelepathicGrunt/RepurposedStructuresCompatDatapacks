@@ -1,0 +1,46 @@
+{
+  "structures": [
+    {
+      "structure": "repurposed_structures:original/pyramid_badlands",
+      "weight": 1
+    },
+    {
+      "structure": "repurposed_structures:original/pyramid_dark_forest",
+      "weight": 1
+    },
+    {
+      "structure": "repurposed_structures:original/pyramid_snowy",
+      "weight": 1
+    },
+    {
+      "structure": "repurposed_structures:original/pyramid_icy",
+      "weight": 1
+    },
+    {
+      "structure": "repurposed_structures:original/pyramid_jungle",
+      "weight": 1
+    },
+    {
+      "structure": "repurposed_structures:original/pyramid_ocean",
+      "weight": 1
+    },
+    {
+      "structure": "repurposed_structures:original/pyramid_giant_tree_taiga",
+      "weight": 1
+    },
+    {
+      "structure": "repurposed_structures:original/pyramid_flower_forest",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1245797932,
+    "spacing": 52,
+    "separation": 29,
+    "type": "repurposed_structures:advanced_random_spread",
+    "super_exclusion_zone": {
+      "chunk_count": 5,
+      "other_set": "#repurposed_structures:collections/modified_pyramids"
+    }
+  }
+}

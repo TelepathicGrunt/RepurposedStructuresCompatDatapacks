@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "repurposed_structures:original/pyramid_badlands",
+    "repurposed_structures:original/pyramid_dark_forest",
+    "repurposed_structures:original/pyramid_end",
+    "repurposed_structures:original/pyramid_flower_forest",
+    "repurposed_structures:original/pyramid_giant_tree_taiga",
+    "repurposed_structures:original/pyramid_icy",
+    "repurposed_structures:original/pyramid_jungle",
+    "repurposed_structures:original/pyramid_mushroom",
+    "repurposed_structures:original/pyramid_nether",
+    "repurposed_structures:original/pyramid_ocean",
+    "repurposed_structures:original/pyramid_snowy"
+  ]
+}

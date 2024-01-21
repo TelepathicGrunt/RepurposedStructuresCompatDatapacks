@@ -1,0 +1,186 @@
+{
+  "name": "hexfortress:jungle/decor/interior_walls",
+  "fallback": "hexfortress:jungle/decor/interior_walls",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_bottom",
+        "processors": "hexfortress:jungle/decor/explosive_barrels_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_bottom",
+        "processors": "hexfortress:jungle/decor/pots_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_bottom",
+        "processors": "hexfortress:jungle/decor/random_book_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_bottom",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top",
+        "processors": "hexfortress:jungle/decor/explosive_barrels_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top",
+        "processors": "hexfortress:jungle/decor/pots_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top",
+        "processors": "hexfortress:jungle/decor/random_book_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top",
+        "processors": "hexfortress:jungle/decor/random_gold_ingot_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top_bottom",
+        "processors": "hexfortress:jungle/decor/explosive_barrels_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top_bottom",
+        "processors": "hexfortress:jungle/decor/pots_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top_bottom",
+        "processors": "hexfortress:jungle/decor/random_book_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top_bottom",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/shelf_top_bottom",
+        "processors": "hexfortress:jungle/decor/random_gold_ingot_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/on_ground",
+        "processors": "hexfortress:jungle/decor/explosive_barrels_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/on_ground",
+        "processors": "hexfortress:jungle/decor/pots_30"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/on_ground",
+        "processors": "hexfortress:jungle/decor/random_book_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/on_ground",
+        "processors": "hexfortress:jungle/decor/random_nether_brick_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/on_ground",
+        "processors": "hexfortress:jungle/decor/random_gold_ingot_pile_less_center"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/interior_wall/chest",
+        "processors": "hexfortress:jungle/decor/pots_30"
+      }
+    }
+  ]
+}

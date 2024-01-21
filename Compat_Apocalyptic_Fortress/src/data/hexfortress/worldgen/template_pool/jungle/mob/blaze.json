@@ -1,0 +1,15 @@
+{
+  "name": "hexfortress:jungle/mob/blaze",
+  "fallback": "hexfortress:jungle/mob/blaze",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/mob/blaze",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    }
+  ]
+}

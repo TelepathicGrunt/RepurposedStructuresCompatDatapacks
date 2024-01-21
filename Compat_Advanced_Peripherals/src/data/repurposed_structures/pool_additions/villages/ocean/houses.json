@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/ocean/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 7,
+      "element": {
+        "location": "advancedperipherals:villages/ocean/scientist",
+        "processors": "repurposed_structures:villages/ocean/randomize",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

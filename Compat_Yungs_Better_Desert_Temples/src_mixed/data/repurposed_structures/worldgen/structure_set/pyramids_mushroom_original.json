@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "repurposed_structures:original/pyramid_mushroom",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1343219257,
+    "spacing": 35,
+    "separation": 15,
+    "type": "repurposed_structures:advanced_random_spread",
+    "super_exclusion_zone": {
+      "chunk_count": 5,
+      "other_set": "#repurposed_structures:collections/modified_pyramids"
+    }
+  }
+}

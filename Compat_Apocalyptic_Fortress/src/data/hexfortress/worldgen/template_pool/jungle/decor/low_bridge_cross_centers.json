@@ -1,0 +1,22 @@
+{
+  "name": "hexfortress:jungle/decor/low_bridge_cross_centers",
+  "fallback": "hexfortress:jungle/decor/low_bridge_cross_centers",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "hexfortress:jungle/decor/low_bridge_center/pillar_base",
+        "processors": "hexfortress:jungle/decor/crying_obsidian_20"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:empty_pool_element",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
