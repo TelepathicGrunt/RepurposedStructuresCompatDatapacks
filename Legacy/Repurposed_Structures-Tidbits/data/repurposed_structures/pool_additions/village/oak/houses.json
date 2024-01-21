@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:village/oak/houses",
+  "fallback": "repurposed_structures:village/oak/terminators",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/contractor_oak",
+        "processors": "repurposed_structures:village/oak/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/dj_stage_oak",
+        "processors": "repurposed_structures:village/oak/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/engineer_oak",
+        "processors": "repurposed_structures:village/oak/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/lumberjack_oak",
+        "processors": "repurposed_structures:village/oak/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

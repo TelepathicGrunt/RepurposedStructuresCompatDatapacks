@@ -1,0 +1,33 @@
+{
+  "name": "repurposed_structures:villages/swamp/houses",
+  "fallback": "repurposed_structures:villages/swamp/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "strange:villages/swamp/houses/swamp_beejack",
+        "processors": "repurposed_structures:villages/strange_processing",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "strange:villages/swamp/houses/swamp_beekeeper_1",
+        "processors": "repurposed_structures:villages/strange_processing",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "strange:villages/swamp/houses/swamp_lumberjack_1",
+        "processors": "repurposed_structures:villages/strange_processing",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

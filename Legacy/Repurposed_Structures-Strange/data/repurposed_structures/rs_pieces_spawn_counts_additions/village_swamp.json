@@ -1,0 +1,19 @@
+{
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "strange:villages/swamp/houses/swamp_beejack",
+      "never_spawn_more_than_this_many": 1,
+      "condition": "strange:rs_village_config"
+    },
+    {
+      "nbt_piece_name" : "strange:villages/swamp/houses/swamp_beekeeper_1",
+      "never_spawn_more_than_this_many": 1,
+      "condition": "strange:rs_village_config"
+    },
+    {
+      "nbt_piece_name" : "strange:villages/swamp/houses/swamp_lumberjack_1",
+      "never_spawn_more_than_this_many": 1,
+      "condition": "strange:rs_village_config"
+    }
+  ]
+}

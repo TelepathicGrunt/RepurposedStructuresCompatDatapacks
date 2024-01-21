@@ -1,0 +1,24 @@
+{
+  "name": "tardis:village/observatory_oak",
+  "fallback": "tardis:village/observatory_oak",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "tardis:village/oak/houses/oak_observatory",
+        "processors": "repurposed_structures:village/oak/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "repurposed_structures:village/oak/houses/big_house_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "repurposed_structures:villages/dark_forest/houses",
+  "fallback": "repurposed_structures:villages/dark_forest/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "strange:villages/dark_forest/houses/dark_forest_beejack",
+        "processors": "repurposed_structures:villages/strange_processing",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "strange:villages/dark_forest/houses/dark_forest_beekeeper_1",
+        "processors": "repurposed_structures:villages/strange_processing",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "strange:villages/dark_forest/houses/dark_forest_lumberjack_1",
+        "processors": "repurposed_structures:villages/strange_processing",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

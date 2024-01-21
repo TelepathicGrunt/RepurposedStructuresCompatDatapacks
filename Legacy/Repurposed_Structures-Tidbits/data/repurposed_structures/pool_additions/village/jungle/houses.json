@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:village/jungle/houses",
+  "fallback": "repurposed_structures:village/jungle/terminators",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "location": "tidbits:village/contractor_jungle",
+        "processors": "repurposed_structures:village/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "tidbits:village/engineer_jungle",
+        "processors": "repurposed_structures:village/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

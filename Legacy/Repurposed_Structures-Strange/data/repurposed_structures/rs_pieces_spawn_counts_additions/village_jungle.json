@@ -1,0 +1,19 @@
+{
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "strange:villages/jungle/houses/jungle_beekeeper_1",
+      "never_spawn_more_than_this_many": 1,
+      "condition": "strange:rs_village_config"
+    },
+    {
+      "nbt_piece_name" : "strange:villages/jungle/houses/jungle_beekeeper_2",
+      "never_spawn_more_than_this_many": 1,
+      "condition": "strange:rs_village_config"
+    },
+    {
+      "nbt_piece_name" : "strange:villages/jungle/houses/jungle_lumberjack_1",
+      "never_spawn_more_than_this_many": 1,
+      "condition": "strange:rs_village_config"
+    }
+  ]
+}

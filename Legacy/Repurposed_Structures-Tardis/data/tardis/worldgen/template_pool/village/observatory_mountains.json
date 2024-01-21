@@ -1,0 +1,24 @@
+{
+  "name": "tardis:village/observatory_mountains",
+  "fallback": "tardis:village/observatory_mountains",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "tardis:village/mountains/houses/mountains_observatory",
+        "processors": "repurposed_structures:village/mountains/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "repurposed_structures:village/mountains/houses/medium_house_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

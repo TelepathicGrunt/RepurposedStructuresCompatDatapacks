@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:village/mushroom/houses",
+  "fallback": "repurposed_structures:village/mushroom/terminators",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "location": "tidbits:village/contractor_mushroom",
+        "processors": "repurposed_structures:village/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "tidbits:village/dj_stage_mushroom",
+        "processors": "repurposed_structures:village/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "tidbits:village/engineer_mushroom",
+        "processors": "repurposed_structures:village/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "tidbits:village/lumberjack_mushroom",
+        "processors": "repurposed_structures:village/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

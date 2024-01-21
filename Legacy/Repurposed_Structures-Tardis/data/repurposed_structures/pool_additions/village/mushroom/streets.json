@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:village/mushroom/streets",
+  "fallback": "repurposed_structures:village/mushroom/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "tardis:village/streets/observatory_street_mushroom",
+        "processors": "repurposed_structures:village/mushroom/path_randomizer",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

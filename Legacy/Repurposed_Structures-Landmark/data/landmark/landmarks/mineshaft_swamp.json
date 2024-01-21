@@ -1,0 +1,6 @@
+{
+  "name_generator": "landmark:nether_fortress",
+  "location": {
+    "feature": "repurposed_structures:mineshaft_swamp_or_dark_forest"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:village/birch/houses",
+  "fallback": "repurposed_structures:village/birch/terminators",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/contractor_birch",
+        "processors": "repurposed_structures:village/birch/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/dj_stage_birch",
+        "processors": "repurposed_structures:village/birch/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/engineer_birch",
+        "processors": "repurposed_structures:village/birch/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/lumberjack_birch",
+        "processors": "repurposed_structures:village/birch/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

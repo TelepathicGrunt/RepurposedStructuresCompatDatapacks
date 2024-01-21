@@ -1,0 +1,24 @@
+{
+  "name": "tidbits:village/big_house_badlands",
+  "fallback": "tidbits:village/big_house_badlands",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "tidbits:village/contractor_badlands",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "tidbits:village/lumberjack_badlands",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

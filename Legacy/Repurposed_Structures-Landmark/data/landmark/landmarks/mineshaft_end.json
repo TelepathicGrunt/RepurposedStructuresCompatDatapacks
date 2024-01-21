@@ -1,0 +1,6 @@
+{
+  "name_generator": "landmark:end_city",
+  "location": {
+    "feature": "repurposed_structures:mineshaft_end"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:village/mountains/houses",
+  "fallback": "repurposed_structures:village/mountains/terminators",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/contractor_mountains",
+        "processors": "repurposed_structures:village/mountains/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/engineer_mountains",
+        "processors": "repurposed_structures:village/mountains/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

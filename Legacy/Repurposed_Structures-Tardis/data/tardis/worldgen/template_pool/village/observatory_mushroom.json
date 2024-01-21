@@ -1,0 +1,15 @@
+{
+  "name": "tardis:village/observatory_mushroom",
+  "fallback": "tardis:village/observatory_mushroom",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "tardis:village/mushroom/houses/mushroom_observatory",
+        "processors": "repurposed_structures:village/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

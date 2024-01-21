@@ -1,0 +1,6 @@
+{
+  "name_generator": "landmark:generic_village",
+  "location": {
+    "feature": "repurposed_structures:village_badlands"
+  }
+}

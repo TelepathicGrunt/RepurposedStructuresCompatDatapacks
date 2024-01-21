@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:village/badlands/houses",
+  "fallback": "repurposed_structures:village/badlands/terminators",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/dj_stage_badlands",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "tidbits:village/engineer_badlands",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

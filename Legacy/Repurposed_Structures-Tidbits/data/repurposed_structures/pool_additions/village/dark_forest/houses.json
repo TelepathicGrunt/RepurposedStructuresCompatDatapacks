@@ -1,0 +1,42 @@
+{
+  "name": "repurposed_structures:village/dark_forest/houses",
+  "fallback": "repurposed_structures:village/dark_forest/terminators",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "tidbits:village/contractor_dark_forest",
+        "processors": "repurposed_structures:village/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "tidbits:village/dj_stage_dark_forest",
+        "processors": "repurposed_structures:village/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/engineer_dark_forest",
+        "processors": "repurposed_structures:village/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "tidbits:village/lumberjack_dark_forest",
+        "processors": "repurposed_structures:village/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

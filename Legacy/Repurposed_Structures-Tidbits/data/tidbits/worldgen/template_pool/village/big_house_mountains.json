@@ -1,0 +1,24 @@
+{
+  "name": "tidbits:village/big_house_mountains",
+  "fallback": "tidbits:village/big_house_mountains",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "tidbits:village/dj_stage_mountains",
+        "processors": "repurposed_structures:village/mountains/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "tidbits:village/lumberjack_mountains",
+        "processors": "repurposed_structures:village/mountains/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}
