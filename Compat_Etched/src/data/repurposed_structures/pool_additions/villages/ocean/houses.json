@@ -5,7 +5,7 @@
     {
       "weight": 5,
       "element": {
-        "location": "etched:villages/ocean/ocean_bard_house_1",
+        "location": "etched:villages/ocean/bard_house",
         "processors": "repurposed_structures:villages/ocean/randomize",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"

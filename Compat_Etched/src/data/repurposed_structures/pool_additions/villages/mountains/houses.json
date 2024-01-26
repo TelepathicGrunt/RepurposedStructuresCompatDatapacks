@@ -5,7 +5,7 @@
     {
       "weight": 9,
       "element": {
-        "location": "etched:villages/mountains/mountains_bard_house_1",
+        "location": "etched:villages/mountains/bard_house",
         "processors": "repurposed_structures:villages/mountains/mossify",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"

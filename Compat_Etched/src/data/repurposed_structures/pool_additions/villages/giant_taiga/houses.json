@@ -5,7 +5,7 @@
     {
       "weight": 9,
       "element": {
-        "location": "etched:villages/giant_taiga/giant_taiga_bard_house_1",
+        "location": "etched:villages/giant_taiga/bard_house",
         "processors": "repurposed_structures:villages/giant_taiga/mossify",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"

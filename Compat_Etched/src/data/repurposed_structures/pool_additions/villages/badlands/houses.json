@@ -5,7 +5,7 @@
     {
       "weight": 5,
       "element": {
-        "location": "etched:villages/badlands/badlands_bard_house_1",
+        "location": "etched:villages/badlands/bard_house",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"

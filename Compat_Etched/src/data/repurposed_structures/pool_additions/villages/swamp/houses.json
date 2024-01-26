@@ -5,7 +5,7 @@
     {
       "weight": 8,
       "element": {
-        "location": "etched:villages/swamp/swamp_bard_house_1",
+        "location": "etched:villages/swamp/bard_house",
         "processors": "repurposed_structures:villages/swamp/mossify",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"
