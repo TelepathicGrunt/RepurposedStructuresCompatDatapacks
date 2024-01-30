@@ -4,7 +4,7 @@ import json
 import shutil
 import re
 
-datapack_location = "C:\Users\MSI Laptop\Documents\ModWorkspace\RepurposedStructuresCompatDatapacks"
+datapack_location = "C:\\Users\\MSI Laptop\\Documents\\ModWorkspace\\RepurposedStructuresCompatDatapacks"
 
 def createFile(input_path, output_path, regex_list):
     file_content = ''
