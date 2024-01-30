@@ -1,6 +1,7 @@
 {
   "pack": {
     "description": "Repurposed Structures - $1 v1",
-    "pack_format": 12
+    "pack_format": 26,
+    "supported_formats": [0, 1000000]
   }
 }
