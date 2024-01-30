@@ -1,0 +1,29 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+issueTrackerURL="https://github.com/TelepathicGrunt/RepurposedStructures/issues"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="Repurposed Structures - ${mod_dependency_name} Compat"
+authors="${mod_authors}"
+description='''
+One of many compat mod for Repurposed Structures.
+Requires both Repurposed Structures mod and ${mod_dependency_name} mod to be on.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="[${minecraft_version},)"
+
+[[dependencies.${mod_id}]]
+    modId="repurposed_structures"
+    type="required"
+    ordering="AFTER"
+
+[[dependencies.${mod_id}]]
+    modId="${mod_dependency_mod_id}"
+    type="required"
+    ordering="AFTER"
