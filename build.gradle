@@ -5,7 +5,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
 plugins {
-    id "me.modmuss50.mod-publish-plugin" version "0.4.5"
+    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
 }
 
 Map<String, String> env = System.getenv()
