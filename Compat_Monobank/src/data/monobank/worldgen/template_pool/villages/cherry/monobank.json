@@ -5,7 +5,7 @@
     {
       "weight": 12,
       "element": {
-        "location": "monobank:villages/cherry/desert_locked",
+        "location": "monobank:villages/cherry/locked",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "monobank:villages/cherry/desert_unlocked",
+        "location": "monobank:villages/cherry/unlocked",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
