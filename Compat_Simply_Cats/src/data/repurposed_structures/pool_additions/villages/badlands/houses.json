@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/badlands/houses",
+  "fallback": "repurposed_structures:villages/badlands/terminators",
+  "elements": [
+    {
+      "weight": 9,
+      "element": {
+        "location": "simplycats:villages/badlands/shelter",
+        "processors": "repurposed_structures:villages/badlands/randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
