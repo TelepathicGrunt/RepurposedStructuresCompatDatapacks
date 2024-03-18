@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/bamboo/houses",
+  "fallback": "repurposed_structures:villages/bamboo/terminators",
+  "elements": [
+    {
+      "weight": 9,
+      "element": {
+        "location": "simplycats:villages/bamboo/shelter",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
