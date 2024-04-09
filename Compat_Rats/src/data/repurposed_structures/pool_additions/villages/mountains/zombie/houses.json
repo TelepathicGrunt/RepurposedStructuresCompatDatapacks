@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:villages/mountains/zombie/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "rats:villages/mountains/garbage_heap",
+        "processors": "repurposed_structures:villages/mountains/zombify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 12,
+      "element": {
+        "location": "rats:villages/mountains/zombie_pet_shop",
+        "processors": "repurposed_structures:villages/mountains/zombify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

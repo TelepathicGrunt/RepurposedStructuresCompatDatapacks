@@ -1,0 +1,24 @@
+{
+  "name": "repurposed_structures:villages/giant_taiga/zombie/houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 6,
+      "element": {
+        "location": "rats:villages/giant_taiga/garbage_heap",
+        "processors": "repurposed_structures:villages/giant_taiga/zombify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 12,
+      "element": {
+        "location": "rats:villages/giant_taiga/zombie_pet_shop",
+        "processors": "repurposed_structures:villages/giant_taiga/zombify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}
