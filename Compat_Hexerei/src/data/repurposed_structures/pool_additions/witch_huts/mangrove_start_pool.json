@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "hexerei:mangrove/witch_hut",
+        "location": "hexerei:witch_huts/mangrove/1",
         "processors": "repurposed_structures:witch_huts/mangrove",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "hexerei:mangrove/witch_hut2",
+        "location": "hexerei:witch_huts/mangrove/2",
         "processors": "repurposed_structures:witch_huts/mangrove",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "hexerei:mangrove/witch_hut4",
+        "location": "hexerei:witch_huts/mangrove/3",
         "processors": "hexerei:witch_hut/witch_hut_legs",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -32,7 +32,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "hexerei:mangrove/witch_hut6",
+        "location": "hexerei:witch_huts/mangrove/4",
         "processors": "hexerei:witch_hut/witch_hut_legs",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -41,7 +41,16 @@
     {
       "weight": 1,
       "element": {
-        "location": "hexerei:mangrove/witch_hut7",
+        "location": "hexerei:witch_huts/mangrove/5",
+        "processors": "hexerei:witch_hut/witch_hut_legs",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "hexerei:witch_huts/mangrove/6",
         "processors": "hexerei:witch_hut/witch_hut_legs",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
