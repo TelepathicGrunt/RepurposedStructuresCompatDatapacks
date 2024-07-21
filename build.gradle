@@ -18,32 +18,30 @@ subprojects {
     apply plugin: "me.modmuss50.mod-publish-plugin"
 
     tasks.register('createJar', Zip) {
-        doLast {
-            outputs.upToDateWhen { false }
+        outputs.upToDateWhen { false }
 
-            String fileSource = "src"
-            String fileModid = project.mod_id
-            String fileDependencyModName = project.mod_dependency_name
-            if (project.hasProperty('do_alternative_source_upload') && project.do_alternative_source_upload as Boolean) {
-                fileSource = project.alternative_source_file
-                fileModid = project.alternative_mod_id
-                fileDependencyModName = project.alternative_mod_dependency_name
-            }
+        String fileSource = "src"
+        String fileModid = project.mod_id
+        String fileDependencyModName = project.mod_dependency_name
+        if (project.hasProperty('do_alternative_source_upload') && project.do_alternative_source_upload as Boolean) {
+            fileSource = project.alternative_source_file
+            fileModid = project.alternative_mod_id
+            fileDependencyModName = project.alternative_mod_dependency_name
+        }
 
-            from "$projectDir/${fileSource}"
-            archiveFileName = "${fileModid}_v${project.mod_version}.jar"
-            destinationDirectory = file("$projectDir/built")
+        from "$projectDir/${fileSource}"
+        archiveFileName = "${fileModid}_v${project.mod_version}.jar"
+        destinationDirectory = file("$projectDir/built")
 
-            filesMatching(['META-INF/mods.toml', 'fabric.mod.json', 'pack.mcmeta']) {
-                filter {
-                    it.replace("\${mod_id}", "${fileModid}")
-                            .replace("\${mod_dependency_name}", "${fileDependencyModName}")
-                            .replace("\${mod_dependency_mod_id}", "${project.mod_dependency_mod_id}")
-                            .replace("\${mod_authors}", "${project.mod_authors}")
-                            .replace("\${mod_license}", "${project.mod_license}")
-                            .replace("\${mod_version}", "${project.mod_version}")
-                            .replace("\${minecraft_version}", "${project.minecraft_version}")
-                }
+        filesMatching(['META-INF/neoforge.mods.toml', 'fabric.mod.json', 'pack.mcmeta']) {
+            filter {
+                it.replace("\${mod_id}", "${fileModid}")
+                        .replace("\${mod_dependency_name}", "${fileDependencyModName}")
+                        .replace("\${mod_dependency_mod_id}", "${project.mod_dependency_mod_id}")
+                        .replace("\${mod_authors}", "${project.mod_authors}")
+                        .replace("\${mod_license}", "${project.mod_license}")
+                        .replace("\${mod_version}", "${project.mod_version}")
+                        .replace("\${minecraft_version}", "${project.minecraft_version}")
             }
         }
     }
@@ -109,7 +107,7 @@ subprojects {
                     }
                 }
 
-                if (env.MODRINTH) {
+                if (env.MODRINTH_TOKEN) {
                     modrinth {
                         accessToken = env.MODRINTH_TOKEN
 
