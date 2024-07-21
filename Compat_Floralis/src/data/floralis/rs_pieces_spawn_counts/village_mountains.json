@@ -1,4 +1,5 @@
 {
+  "target_structure": "repurposed_structures:village_mountains",
   "pieces_spawn_counts": [
     {
       "nbt_piece_name": "floralis:villages/mountains/farm",

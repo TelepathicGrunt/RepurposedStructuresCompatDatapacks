@@ -1,5 +1,5 @@
 {
-  "name": "repurposed_structures:villages/cherry/houses",
+  "target_pool": "repurposed_structures:villages/cherry/houses",
   "fallback": "minecraft:empty",
   "elements": [
     {

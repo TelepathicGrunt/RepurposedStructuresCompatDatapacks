@@ -1,5 +1,5 @@
 {
-  "name": "repurposed_structures:villages/birch/houses",
+  "target_pool": "repurposed_structures:villages/birch/houses",
   "fallback": "minecraft:empty",
   "elements": [
     {

@@ -1,4 +1,5 @@
 {
+  "target_structure": "repurposed_structures:village_birch",
   "pieces_spawn_counts": [
     {
       "nbt_piece_name": "floralis:villages/birch/farm",
