@@ -5,7 +5,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
 plugins {
-    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
+    id "me.modmuss50.mod-publish-plugin" version "0.6.2"
 }
 
 Map<String, String> env = System.getenv()
@@ -49,7 +49,7 @@ subprojects {
     }
 
     tasks.register('buildAndRelease') {}
-    tasks.publishMods.mustRunAfter tasks.createJar
+    tasks.publishMods.mustRunAfter(tasks.createJar)
     tasks.buildAndRelease.dependsOn(tasks.publishMods)
 
     afterEvaluate {
