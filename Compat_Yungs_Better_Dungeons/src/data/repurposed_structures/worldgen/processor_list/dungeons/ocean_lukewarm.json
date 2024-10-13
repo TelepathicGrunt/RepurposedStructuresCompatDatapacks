@@ -349,7 +349,7 @@
             "Name": "minecraft:water"
           },
           "input_predicate": {
-            "block": "minecraft:furnance",
+            "block": "minecraft:furnace",
             "probability": 0.55,
             "predicate_type": "minecraft:random_block_match"
           },

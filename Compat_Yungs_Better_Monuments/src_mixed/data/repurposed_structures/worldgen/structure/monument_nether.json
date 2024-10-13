@@ -5,6 +5,7 @@
   "biomes": "#repurposed_structures:has_structure/monuments/nether",
   "step": "strongholds",
   "terrain_adaptation": "none",
+  "liquid_settings": "ignore_waterlogging",
   "start_height": {
     "absolute": 31
   },

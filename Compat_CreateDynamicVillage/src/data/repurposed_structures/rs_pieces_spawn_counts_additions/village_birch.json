@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "dynamicvillage:villages/birch/mech",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/birch/miner",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/birch/plumber",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/birch/train",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

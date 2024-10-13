@@ -440,7 +440,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -463,7 +463,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -478,7 +478,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_processor_list": "betterdeserttemples:icy/foundation",
       "pillar_trigger_and_replacements": [
         {
@@ -490,9 +490,6 @@
           }
         }
       ]
-    },
-    {
-      "processor_type": "repurposed_structures:waterlogging_fix_processor"
     }
   ]
 }

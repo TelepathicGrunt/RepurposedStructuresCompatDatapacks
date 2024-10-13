@@ -7,6 +7,7 @@
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "land_search_direction": "LOWEST_LAND",
+  "liquid_settings": "ignore_waterlogging",
   "start_height": {
     "absolute": -2
   },

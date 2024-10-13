@@ -6,6 +6,7 @@
   "biomes": "#repurposed_structures:has_structure/temples/nether_warped",
   "step": "surface_structures",
   "terrain_adaptation": "beard_box",
+  "liquid_settings": "ignore_waterlogging",
   "start_height": {
     "absolute": 32
   },

@@ -72,7 +72,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_processor_list": "betteroceanmonuments:desert/main",
       "pillar_trigger_and_replacements": [
         {
@@ -333,9 +333,6 @@
     },
     {
       "processor_type": "repurposed_structures:structure_void_processor"
-    },
-    {
-      "processor_type": "repurposed_structures:waterlogging_fix_processor"
     }
   ]
 }

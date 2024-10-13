@@ -1,9 +1,6 @@
 {
   "processors": [
     {
-      "processor_type": "betterwitchhuts:waterlog_processor"
-    },
-    {
       "processor_type": "betterwitchhuts:brewing_stand_processor"
     },
     {
@@ -11,7 +8,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_trigger_and_replacements": [
         {
           "trigger" : {

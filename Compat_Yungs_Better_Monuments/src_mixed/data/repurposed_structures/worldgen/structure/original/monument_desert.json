@@ -6,6 +6,7 @@
   "biomes": "#repurposed_structures:has_structure/monuments/desert",
   "step": "surface_structures",
   "terrain_adaptation": "none",
+  "liquid_settings": "ignore_waterlogging",
   "spawn_overrides": {
     "monster": {
       "bounding_box": "piece",

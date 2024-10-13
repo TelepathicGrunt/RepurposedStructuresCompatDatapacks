@@ -405,7 +405,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -427,7 +427,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -442,7 +442,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_trigger_and_replacements": [
         {
           "trigger" : {
@@ -453,9 +453,6 @@
           }
         }
       ]
-    },
-    {
-      "processor_type": "repurposed_structures:waterlogging_fix_processor"
     }
   ]
 }

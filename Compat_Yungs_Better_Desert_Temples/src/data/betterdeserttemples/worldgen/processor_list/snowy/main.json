@@ -270,7 +270,7 @@
       "probability": 1,
       "input_block": "minecraft:end_stone_brick_wall",
       "output_blocks": [
-        "minecraft:polished_diorite_wall"
+        "minecraft:diorite_wall"
       ]
     },
     {
@@ -406,7 +406,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -429,7 +429,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -444,7 +444,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_trigger_and_replacements": [
         {
           "trigger" : {
@@ -455,9 +455,6 @@
           }
         }
       ]
-    },
-    {
-      "processor_type": "repurposed_structures:waterlogging_fix_processor"
     }
   ]
 }

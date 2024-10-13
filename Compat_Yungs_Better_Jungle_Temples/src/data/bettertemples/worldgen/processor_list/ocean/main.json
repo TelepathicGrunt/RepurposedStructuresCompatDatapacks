@@ -1,7 +1,7 @@
 {
   "processors": [
     {
-      "processor_type": "repurposed_structures:capped_structure_surface_processor",
+      "processor_type": "repurposed_structures:structure_surface_processor",
       "allow_void_sides": true,
       "delegate": {
         "processor_type": "minecraft:rule",
@@ -141,9 +141,6 @@
           }
         ]
       }
-    },
-    {
-      "processor_type": "betterjungletemples:waterlog_processor"
     },
     {
       "processor_type": "betterjungletemples:empty_dispenser_processor"
@@ -734,6 +731,30 @@
           "input_predicate": {
             "predicate_type": "minecraft:block_match",
             "block": "minecraft:green_stained_glass"
+          },
+          "output_state": {
+            "Name": "minecraft:water"
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:air"
+          },
+          "output_state": {
+            "Name": "minecraft:water"
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:cave_air"
           },
           "output_state": {
             "Name": "minecraft:water"

@@ -1,0 +1,24 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "dynamicvillage:villages/jungle/mech",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/jungle/miner",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/jungle/plumber",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/jungle/train",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/jungle/large_street",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

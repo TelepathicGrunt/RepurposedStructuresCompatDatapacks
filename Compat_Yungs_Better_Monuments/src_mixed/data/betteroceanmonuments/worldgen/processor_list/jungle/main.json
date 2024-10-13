@@ -1,7 +1,7 @@
 {
   "processors": [
     {
-      "processor_type": "repurposed_structures:capped_structure_surface_processor",
+      "processor_type": "repurposed_structures:structure_surface_processor",
       "allow_void_sides": true,
       "delegate": {
         "processor_type": "minecraft:rule",
@@ -197,7 +197,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_processor_list": "betteroceanmonuments:jungle/main",
       "pillar_trigger_and_replacements": [
         {
@@ -675,9 +675,6 @@
     },
     {
       "processor_type": "repurposed_structures:structure_void_processor"
-    },
-    {
-      "processor_type": "repurposed_structures:waterlogging_fix_processor"
     }
   ]
 }

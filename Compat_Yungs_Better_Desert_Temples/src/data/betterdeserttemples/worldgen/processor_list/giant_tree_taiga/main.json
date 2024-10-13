@@ -149,7 +149,7 @@
         },
         {
           "output_state": {
-            "Name": "minecraft:cobblestone_planks"
+            "Name": "minecraft:cobblestone"
           },
           "input_predicate": {
             "block": "minecraft:acacia_wood",
@@ -472,7 +472,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_processor_list": "betterdeserttemples:giant_tree_taiga/main",
       "pillar_trigger_and_replacements": [
@@ -496,7 +496,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -511,7 +511,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_processor_list": "betterdeserttemples:giant_tree_taiga/main",
       "pillar_trigger_and_replacements": [
         {
@@ -523,9 +523,6 @@
           }
         }
       ]
-    },
-    {
-      "processor_type": "repurposed_structures:waterlogging_fix_processor"
     }
   ]
 }

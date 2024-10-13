@@ -1,0 +1,15 @@
+{
+  "name": "dynamicvillage:villages/bamboo/large_buildings",
+  "fallback": "dynamicvillage:villages/bamboo/large_buildings",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "dynamicvillage:villages/bamboo/mech",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,18 +1,6 @@
 {
   "processors": [
     {
-      "processor_type": "betterstrongholds:air_processor"
-    },
-    {
-      "processor_type": "betterstrongholds:banner_processor"
-    },
-    {
-      "processor_type": "betterstrongholds:redstone_processor"
-    },
-    {
-      "processor_type": "betterstrongholds:waterlogged_processor"
-    },
-    {
       "rules": [
         {
           "output_state": {
@@ -75,6 +63,18 @@
             "block": "minecraft:small_amethyst_bud",
             "probability": 0.85,
             "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "minecraft:iron_bars"
+          },
+          "input_predicate": {
+            "block": "minecraft:stone_brick_wall",
+            "predicate_type": "minecraft:block_match"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"

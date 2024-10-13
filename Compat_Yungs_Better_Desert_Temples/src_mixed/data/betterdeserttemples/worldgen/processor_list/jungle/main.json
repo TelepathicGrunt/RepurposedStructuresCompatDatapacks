@@ -1,7 +1,7 @@
 {
   "processors": [
     {
-      "processor_type": "repurposed_structures:capped_structure_surface_processor",
+      "processor_type": "repurposed_structures:structure_surface_processor",
       "allow_void_sides": true,
       "delegate": {
         "processor_type": "minecraft:rule",
@@ -255,7 +255,7 @@
         },
         {
           "output_state": {
-            "Name": "minecraft:stone_brick_planks"
+            "Name": "minecraft:stone_bricks"
           },
           "input_predicate": {
             "block": "minecraft:acacia_wood",
@@ -379,7 +379,7 @@
       "probability": 1,
       "input_block": "minecraft:diorite",
       "output_blocks": [
-        "minecraft:mossy_stone_brick",
+        "minecraft:mossy_stone_bricks",
         "minecraft:stone_brick_slab",
         "minecraft:stone_bricks",
         "minecraft:cracked_stone_bricks"
@@ -615,7 +615,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_processor_list": "betterdeserttemples:jungle/main",
       "pillar_trigger_and_replacements": [
@@ -639,7 +639,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_length": 8,
       "pillar_trigger_and_replacements": [
         {
@@ -654,7 +654,7 @@
     },
     {
       "processor_type": "repurposed_structures:pillar_processor",
-      "direction": "DOWN",
+      "direction": "down",
       "pillar_processor_list": "betterdeserttemples:jungle/main",
       "pillar_trigger_and_replacements": [
         {
@@ -666,9 +666,6 @@
           }
         }
       ]
-    },
-    {
-      "processor_type": "repurposed_structures:waterlogging_fix_processor"
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "dynamicvillage:villages/mushroom/mech",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/mushroom/miner",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/mushroom/plumber",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/mushroom/train",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

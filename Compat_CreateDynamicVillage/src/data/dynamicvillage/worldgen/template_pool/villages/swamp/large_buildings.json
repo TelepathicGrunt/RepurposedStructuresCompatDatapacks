@@ -1,0 +1,24 @@
+{
+  "name": "dynamicvillage:villages/swamp/large_buildings",
+  "fallback": "dynamicvillage:villages/swamp/large_buildings",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "dynamicvillage:villages/swamp/mech",
+        "processors": "repurposed_structures:villages/swamp/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "dynamicvillage:villages/swamp/train",
+        "processors": "repurposed_structures:villages/swamp/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

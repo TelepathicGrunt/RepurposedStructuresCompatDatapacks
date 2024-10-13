@@ -1,9 +1,6 @@
 {
   "processors": [
     {
-      "processor_type": "betterjungletemples:waterlog_processor"
-    },
-    {
       "processor_type": "betterjungletemples:empty_dispenser_processor"
     },
     {
@@ -256,12 +253,12 @@
       },
       "output": {
         "defaultBlockState": {
-          "Name": "minecraft:chiseled_polished_blackstone_bricks"
+          "Name": "minecraft:polished_blackstone_bricks"
         },
         "entries": [
           {
             "blockState": {
-              "Name": "minecraft:chiseled_polished_blackstone_bricks"
+              "Name": "minecraft:cracked_polished_blackstone_bricks"
             },
             "probability": 0.75
           }
@@ -502,58 +499,6 @@
     {
       "processor_type": "minecraft:rule",
       "rules": [
-        {
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "input_predicate": {
-            "predicate_type": "minecraft:random_block_match",
-            "block": "supplementaries:sconce",
-            "probability": 0.9
-          },
-          "output_state": {
-            "Name": "minecraft:air"
-          }
-        },
-        {
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "input_predicate": {
-            "predicate_type": "minecraft:random_block_match",
-            "block": "supplementaries:sconce_soul",
-            "probability": 0.9
-          },
-          "output_state": {
-            "Name": "minecraft:air"
-          }
-        },
-        {
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "input_predicate": {
-            "predicate_type": "minecraft:random_block_match",
-            "block": "supplementaries:sconce_wall",
-            "probability": 0.9
-          },
-          "output_state": {
-            "Name": "minecraft:air"
-          }
-        },
-        {
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "input_predicate": {
-            "predicate_type": "minecraft:random_block_match",
-            "block": "supplementaries:sconce_wall_soul",
-            "probability": 0.9
-          },
-          "output_state": {
-            "Name": "minecraft:air"
-          }
-        },
         {
           "location_predicate": {
             "predicate_type": "minecraft:always_true"

@@ -1,0 +1,20 @@
+{
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "dynamicvillage:villages/dark_forest/mech",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/dark_forest/miner",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/dark_forest/plumber",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "dynamicvillage:villages/dark_forest/train",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}
