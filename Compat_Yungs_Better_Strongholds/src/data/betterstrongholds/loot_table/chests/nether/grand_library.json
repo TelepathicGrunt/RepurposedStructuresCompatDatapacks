@@ -53,7 +53,7 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": 15,
-              "treasure": true
+              "options": "#minecraft:on_random_loot"
             }
           ],
           "name": "minecraft:book"
@@ -65,7 +65,7 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": 23,
-              "treasure": true
+              "options": "#minecraft:on_random_loot"
             }
           ],
           "name": "minecraft:book"
@@ -77,7 +77,7 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": 30,
-              "treasure": true
+              "options": "#minecraft:on_random_loot"
             }
           ],
           "name": "minecraft:book"

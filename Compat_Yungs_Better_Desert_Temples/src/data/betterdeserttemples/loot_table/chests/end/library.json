@@ -57,7 +57,7 @@
                 "max": 35.0,
                 "type": "minecraft:uniform"
               },
-              "treasure": true
+              "options": "#minecraft:on_random_loot"
             }
           ],
           "name": "minecraft:book"
@@ -73,7 +73,7 @@
                 "max": 45.0,
                 "type": "minecraft:uniform"
               },
-              "treasure": true
+              "options": "#minecraft:on_random_loot"
             }
           ],
           "name": "minecraft:book"
