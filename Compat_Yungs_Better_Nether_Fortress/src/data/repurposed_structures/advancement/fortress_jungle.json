@@ -2,7 +2,7 @@
   "parent": "repurposed_structures:root",
   "display": {
     "icon": {
-      "item": "minecraft:mossy_stone_bricks"
+      "id": "minecraft:mossy_stone_bricks"
     },
     "title": {
       "translate": "Decaying Glory"
@@ -27,7 +27,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "repurposed_structures:fortress_jungle_yungs"
+                "structures": "repurposed_structures:fortress_jungle_yungs"
               }
             }
           }
