@@ -177,6 +177,15 @@
       ]
     },
     {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "repurposed_structures:chests/lucky_pool"
+        }
+      ]
+    },
+    {
       "rolls": 0,
       "bonus_rolls": 1,
       "entries": [
@@ -190,8 +199,58 @@
           "weight": 30,
           "functions": [
             {
-              "function":"set_nbt",
-              "tag":"{BlockEntityTag:{Patterns:[{Pattern:cr,Color:15},{Pattern:cr,Color:8},{Pattern:cbo,Color:15},{Pattern:cbo,Color:8},{Pattern:bo,Color:15},{Pattern:mr,Color:15},{Pattern:mr,Color:8},{Pattern:bo,Color:8},{Pattern:mc,Color:15},{Pattern:mc,Color:15},{Pattern:mc,Color:15},{Pattern:mc,Color:8}]}}"
+              "function": "minecraft:set_banner_pattern",
+              "append": true,
+              "patterns": [
+                {
+                  "pattern": "minecraft:cross",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:cross",
+                  "color": "light_gray"
+                },
+                {
+                  "pattern": "minecraft:curly_border",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:curly_border",
+                  "color": "light_gray"
+                },
+                {
+                  "pattern": "minecraft:border",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:rhombus",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:rhombus",
+                  "color": "light_gray"
+                },
+                {
+                  "pattern": "minecraft:border",
+                  "color": "light_gray"
+                },
+                {
+                  "pattern": "minecraft:circle",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:circle",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:circle",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:circle",
+                  "color": "light_gray"
+                }
+              ]
             }
           ]
         },

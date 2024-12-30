@@ -264,20 +264,18 @@
       ]
     },
     {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "repurposed_structures:chests/lucky_pool"
+        }
+      ]
+    },
+    {
       "rolls": 0,
       "bonus_rolls": 1,
       "entries": [
-        {
-          "name": "minecraft:pink_banner",
-          "type": "minecraft:item",
-          "weight": 5,
-          "functions": [
-            {
-              "function":"set_nbt",
-              "tag":"{BlockEntityTag:{Patterns:[{Pattern:cs,Color:0},{Pattern:cs,Color:0},{Pattern:cs,Color:0},{Pattern:bo,Color:3},{Pattern:bo,Color:3},{Pattern:bo,Color:3}]}}"
-            }
-          ]
-        },
         {
           "type": "minecraft:empty",
           "weight": 47
@@ -288,8 +286,58 @@
           "weight": 18,
           "functions": [
             {
-              "function":"set_nbt",
-              "tag":"{BlockEntityTag:{Patterns:[{Pattern:gra,Color:15},{Pattern:gru,Color:15},{Pattern:sc,Color:2},{Pattern:sc,Color:10},{Pattern:sc,Color:15},{Pattern:flo,Color:2},{Pattern:flo,Color:2},{Pattern:mr,Color:15},{Pattern:mc,Color:10},{Pattern:flo,Color:15},{Pattern:cbo,Color:15},{Pattern:bo,Color:15}]}}"
+              "function": "minecraft:set_banner_pattern",
+              "append": true,
+              "patterns": [
+                {
+                  "pattern": "minecraft:gradient",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:gradient_up",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:straight_cross",
+                  "color": "magenta"
+                },
+                {
+                  "pattern": "minecraft:straight_cross",
+                  "color": "purple"
+                },
+                {
+                  "pattern": "minecraft:straight_cross",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:flower",
+                  "color": "magenta"
+                },
+                {
+                  "pattern": "minecraft:flower",
+                  "color": "magenta"
+                },
+                {
+                  "pattern": "minecraft:rhombus",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:circle",
+                  "color": "purple"
+                },
+                {
+                  "pattern": "minecraft:flower",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:curly_border",
+                  "color": "black"
+                },
+                {
+                  "pattern": "minecraft:border",
+                  "color": "black"
+                }
+              ]
             }
           ]
         },
