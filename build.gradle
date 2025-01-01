@@ -5,7 +5,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
 plugins {
-    id "me.modmuss50.mod-publish-plugin" version "0.6.2"
+    id "me.modmuss50.mod-publish-plugin" version "0.7.2"
 }
 
 Map<String, String> env = System.getenv()
@@ -98,6 +98,8 @@ subprojects {
                             combinedRequiredDeps.addAll(fabricDependenciesParsed["CurseForge"])
                         }
 
+                        combinedRequiredDeps.unique()
+
                         if (loadersParsed.size() > 1) {
                             optional(combinedRequiredDeps.toArray(String[]::new))
                         }
@@ -124,6 +126,8 @@ subprojects {
                         if (loadersParsed.contains("fabric")) {
                             combinedRequiredDeps.addAll(fabricDependenciesParsed["Modrinth"])
                         }
+
+                        combinedRequiredDeps.unique()
 
                         if (loadersParsed.size() > 1) {
                             optional(combinedRequiredDeps.toArray(String[]::new))
