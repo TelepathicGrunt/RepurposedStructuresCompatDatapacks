@@ -72,7 +72,7 @@ subprojects {
             publishMods {
                 file = tasks.createJar.archiveFile
 
-                displayName  = "Repurposed Structures - ${fileDependencyModName} Compat"
+                displayName  = "Repurposed Structures - ${fileDependencyModName} Compat v${project.mod_version}"
                 type = STABLE
 
                 changelog = changeLogText
