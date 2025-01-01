@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/giant_taiga/houses",
+  "fallback": "repurposed_structures:villages/giant_taiga/terminators",
+  "elements": [
+    {
+      "weight": 9,
+      "element": {
+        "location": "simplycats:villages/giant_taiga/shelter",
+        "processors": "repurposed_structures:villages/giant_taiga/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

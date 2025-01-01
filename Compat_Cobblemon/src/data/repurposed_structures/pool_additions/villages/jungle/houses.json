@@ -1,0 +1,15 @@
+{
+  "name": "repurposed_structures:villages/jungle/houses",
+  "fallback": "repurposed_structures:villages/jungle/terminators",
+  "elements": [
+    {
+      "weight": 9,
+      "element": {
+        "location": "simplycats:villages/jungle/shelter",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
