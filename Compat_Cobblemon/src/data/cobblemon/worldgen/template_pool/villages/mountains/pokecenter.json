@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/mountains/houses",
-  "fallback": "repurposed_structures:villages/mountains/terminators",
+  "fallback": "cobblemon:villages/mountains/houses",
   "elements": [
     {
       "weight": 1,

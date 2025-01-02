@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/mushroom/houses",
-  "fallback": "repurposed_structures:villages/mushroom/terminators",
+  "fallback": "cobblemon:villages/mushroom/houses",
   "elements": [
     {
       "weight": 1,

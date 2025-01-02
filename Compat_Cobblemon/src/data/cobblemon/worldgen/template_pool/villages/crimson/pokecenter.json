@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/crimson/houses",
-  "fallback": "repurposed_structures:villages/crimson/terminators",
+  "fallback": "cobblemon:villages/crimson/houses",
   "elements": [
     {
       "weight": 1,

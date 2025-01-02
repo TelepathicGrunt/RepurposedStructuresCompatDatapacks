@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/bamboo/houses",
-  "fallback": "repurposed_structures:villages/bamboo/terminators",
+  "fallback": "cobblemon:villages/bamboo/houses",
   "elements": [
     {
       "weight": 1,

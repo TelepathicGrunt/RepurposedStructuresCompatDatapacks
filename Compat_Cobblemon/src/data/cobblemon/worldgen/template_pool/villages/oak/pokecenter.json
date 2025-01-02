@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/oak/houses",
-  "fallback": "repurposed_structures:villages/oak/terminators",
+  "fallback": "cobblemon:villages/oak/houses",
   "elements": [
     {
       "weight": 1,

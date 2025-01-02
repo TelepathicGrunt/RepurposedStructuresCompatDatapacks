@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/badlands/houses",
-  "fallback": "repurposed_structures:villages/badlands/terminators",
+  "fallback": "cobblemon:villages/badlands/houses",
   "elements": [
     {
       "weight": 1,

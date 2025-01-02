@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/birch/houses",
-  "fallback": "repurposed_structures:villages/birch/terminators",
+  "fallback": "cobblemon:villages/birch/houses",
   "elements": [
     {
       "weight": 1,

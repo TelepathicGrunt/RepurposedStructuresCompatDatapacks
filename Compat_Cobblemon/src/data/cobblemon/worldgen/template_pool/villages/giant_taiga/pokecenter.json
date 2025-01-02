@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/giant_taiga/houses",
-  "fallback": "repurposed_structures:villages/giant_taiga/terminators",
+  "fallback": "cobblemon:villages/giant_taiga/houses",
   "elements": [
     {
       "weight": 1,

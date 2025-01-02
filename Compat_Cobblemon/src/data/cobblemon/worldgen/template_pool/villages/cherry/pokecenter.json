@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/cherry/houses",
-  "fallback": "repurposed_structures:villages/cherry/terminators",
+  "fallback": "cobblemon:villages/cherry/houses",
   "elements": [
     {
       "weight": 1,

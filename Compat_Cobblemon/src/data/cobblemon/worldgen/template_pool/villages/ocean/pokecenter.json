@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/ocean/houses",
-  "fallback": "repurposed_structures:villages/ocean/terminators",
+  "fallback": "cobblemon:villages/ocean/houses",
   "elements": [
     {
       "weight": 1,

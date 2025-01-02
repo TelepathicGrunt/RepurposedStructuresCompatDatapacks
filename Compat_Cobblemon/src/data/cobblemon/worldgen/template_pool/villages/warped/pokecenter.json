@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/warped/houses",
-  "fallback": "repurposed_structures:villages/warped/terminators",
+  "fallback": "cobblemon:villages/warped/houses",
   "elements": [
     {
       "weight": 1,

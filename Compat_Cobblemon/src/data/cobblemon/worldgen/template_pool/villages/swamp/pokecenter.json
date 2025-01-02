@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/swamp/houses",
-  "fallback": "repurposed_structures:villages/swamp/terminators",
+  "fallback": "cobblemon:villages/swamp/houses",
   "elements": [
     {
       "weight": 1,

@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/dark_forest/houses",
-  "fallback": "repurposed_structures:villages/dark_forest/terminators",
+  "fallback": "cobblemon:villages/dark_forest/houses",
   "elements": [
     {
       "weight": 1,

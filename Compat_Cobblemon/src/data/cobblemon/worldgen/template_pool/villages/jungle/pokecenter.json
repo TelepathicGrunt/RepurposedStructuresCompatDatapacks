@@ -1,6 +1,6 @@
 {
   "name": "cobblemon:villages/jungle/houses",
-  "fallback": "repurposed_structures:villages/jungle/terminators",
+  "fallback": "cobblemon:villages/jungle/houses",
   "elements": [
     {
       "weight": 1,
