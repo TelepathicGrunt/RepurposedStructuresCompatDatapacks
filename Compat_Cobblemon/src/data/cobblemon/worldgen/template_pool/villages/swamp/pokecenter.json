@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:villages/swamp/houses",
+  "fallback": "repurposed_structures:villages/swamp/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location" : "cobblemon:villages/swamp/pokecenter",
+        "processors": "repurposed_structures:villages/swamp/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

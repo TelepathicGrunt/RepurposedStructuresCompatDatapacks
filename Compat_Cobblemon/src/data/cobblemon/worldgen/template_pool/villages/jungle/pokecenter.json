@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:villages/jungle/houses",
+  "fallback": "repurposed_structures:villages/jungle/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cobblemon:villages/jungle/pokecenter",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

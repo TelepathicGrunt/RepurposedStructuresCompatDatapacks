@@ -3,10 +3,19 @@
   "fallback": "repurposed_structures:villages/mountains/terminators",
   "elements": [
     {
-      "weight": 9,
+      "weight": 5,
       "element": {
-        "location": "simplycats:villages/mountains/shelter",
-        "processors": "repurposed_structures:villages/mountains/mossify",
+        "location": "cobblemon:villages/mountains/berry_small",
+        "processors": "cobblemon:villages/mountains/crop_to_berry",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "cobblemon:villages/mountains/berry_large",
+        "processors": "cobblemon:villages/mountains/crop_to_berry",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

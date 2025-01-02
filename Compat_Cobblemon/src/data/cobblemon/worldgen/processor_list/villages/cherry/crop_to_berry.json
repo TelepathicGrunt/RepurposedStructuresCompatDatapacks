@@ -1,0 +1,62 @@
+{
+  "processors": [
+    {
+      "processor_type": "cobblemon:random_pooled_states",
+      "probability": 1,
+      "transformer": {
+        "type": "BERRY_TRANSFORM",
+        "minAge": 1,
+        "maxAge": 3,
+        "isWild": false
+      },
+      "rules": [
+        {
+          "tag": "minecraft:crops",
+          "predicate_type": "minecraft:tag_match"
+        }
+      ],
+      "targetBlockPairs": [
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:chesto_berry"
+        },
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:bluk_berry"
+        },
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:shuca_berry"
+        },
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:rindo_berry"
+        },
+        {
+          "first": "cobblemon:chesto_berry",
+          "second": "cobblemon:bluk_berry"
+        },
+        {
+          "first": "cobblemon:chesto_berry",
+          "second": "cobblemon:shuca_berry"
+        },
+        {
+          "first": "cobblemon:chesto_berry",
+          "second": "cobblemon:rindo_berry"
+        },
+        {
+          "first": "cobblemon:bluk_berry",
+          "second": "cobblemon:shuca_berry"
+        },
+        {
+          "first": "cobblemon:bluk_berry",
+          "second": "cobblemon:rindo_berry"
+        },
+        {
+          "first": "cobblemon:shuca_berry",
+          "second": "cobblemon:rindo_berry"
+        }
+      ]
+    }
+  ]
+}

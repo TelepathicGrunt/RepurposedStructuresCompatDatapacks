@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:villages/warped/houses",
+  "fallback": "repurposed_structures:villages/warped/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cobblemon:villages/warped/pokecenter",
+        "processors": "repurposed_structures:villages/warped/randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

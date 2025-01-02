@@ -1,0 +1,62 @@
+{
+  "processors": [
+    {
+      "processor_type": "cobblemon:random_pooled_states",
+      "probability": 1,
+      "transformer": {
+        "type": "BERRY_TRANSFORM",
+        "minAge": 1,
+        "maxAge": 3,
+        "isWild": false
+      },
+      "rules": [
+        {
+          "tag": "minecraft:crops",
+          "predicate_type": "minecraft:tag_match"
+        }
+      ],
+      "targetBlockPairs": [
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:pinap_berry"
+        },
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:nanab_berry"
+        },
+        {
+          "first": "cobblemon:pinap_berry",
+          "second": "cobblemon:kasib_berry"
+        },
+        {
+          "first": "cobblemon:pinap_berry",
+          "second": "cobblemon:babiri_berry"
+        },
+        {
+          "first": "cobblemon:pinap_berry",
+          "second": "cobblemon:nanab_berry"
+        },
+        {
+          "first": "cobblemon:pinap_berry",
+          "second": "cobblemon:kasib_berry"
+        },
+        {
+          "first": "cobblemon:pinap_berry",
+          "second": "cobblemon:babiri_berry"
+        },
+        {
+          "first": "cobblemon:nanab_berry",
+          "second": "cobblemon:kasib_berry"
+        },
+        {
+          "first": "cobblemon:nanab_berry",
+          "second": "cobblemon:babiri_berry"
+        },
+        {
+          "first": "cobblemon:kasib_berry",
+          "second": "cobblemon:babiri_berry"
+        }
+      ]
+    }
+  ]
+}

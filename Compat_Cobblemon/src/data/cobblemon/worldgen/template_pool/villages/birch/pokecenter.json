@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:villages/birch/houses",
+  "fallback": "repurposed_structures:villages/birch/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cobblemon:villages/birch/pokecenter",
+        "processors": "repurposed_structures:villages/birch/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

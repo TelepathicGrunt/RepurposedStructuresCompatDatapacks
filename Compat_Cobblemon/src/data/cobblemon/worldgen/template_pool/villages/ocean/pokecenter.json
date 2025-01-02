@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:villages/ocean/houses",
+  "fallback": "repurposed_structures:villages/ocean/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cobblemon:villages/ocean/pokecenter",
+        "processors": "repurposed_structures:villages/ocean/randomize",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

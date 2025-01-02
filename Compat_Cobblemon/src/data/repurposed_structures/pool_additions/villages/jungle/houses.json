@@ -3,10 +3,19 @@
   "fallback": "repurposed_structures:villages/jungle/terminators",
   "elements": [
     {
-      "weight": 9,
+      "weight": 5,
       "element": {
-        "location": "simplycats:villages/jungle/shelter",
-        "processors": "repurposed_structures:villages/jungle/mossify",
+        "location": "cobblemon:villages/jungle/berry_small",
+        "processors": "cobblemon:villages/jungle/crop_to_berry",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "cobblemon:villages/jungle/berry_large",
+        "processors": "cobblemon:villages/jungle/crop_to_berry",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

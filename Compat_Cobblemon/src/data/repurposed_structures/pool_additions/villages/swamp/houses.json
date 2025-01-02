@@ -3,10 +3,19 @@
   "fallback": "repurposed_structures:villages/swamp/terminators",
   "elements": [
     {
-      "weight": 9,
+      "weight": 5,
       "element": {
-        "location": "simplycats:villages/swamp/shelter",
-        "processors": "repurposed_structures:villages/swamp/mossify",
+        "location": "cobblemon:villages/swamp/berry_small",
+        "processors": "cobblemon:villages/swamp/crop_to_berry",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "cobblemon:villages/swamp/berry_large",
+        "processors": "cobblemon:villages/swamp/crop_to_berry",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

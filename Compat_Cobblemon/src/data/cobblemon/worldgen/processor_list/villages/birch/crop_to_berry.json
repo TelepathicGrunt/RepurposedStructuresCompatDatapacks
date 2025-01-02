@@ -1,0 +1,62 @@
+{
+  "processors": [
+    {
+      "processor_type": "cobblemon:random_pooled_states",
+      "probability": 1,
+      "transformer": {
+        "type": "BERRY_TRANSFORM",
+        "minAge": 1,
+        "maxAge": 3,
+        "isWild": false
+      },
+      "rules": [
+        {
+            "tag": "minecraft:crops",
+            "predicate_type": "minecraft:tag_match"
+        }
+      ],
+      "targetBlockPairs": [
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:pecha_berry"
+        },
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:rawst_berry"
+        },
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:chilan_berry"
+        },
+        {
+          "first": "cobblemon:oran_berry",
+          "second": "cobblemon:chople_berry"
+        },
+        {
+          "first": "cobblemon:pecha_berry",
+          "second": "cobblemon:rawst_berry"
+        },
+        {
+          "first": "cobblemon:pecha_berry",
+          "second": "cobblemon:chilan_berry"
+        },
+        {
+          "first": "cobblemon:pecha_berry",
+          "second": "cobblemon:chople_berry"
+        },
+        {
+          "first": "cobblemon:rawst_berry",
+          "second": "cobblemon:chilan_berry"
+        },
+        {
+          "first": "cobblemon:rawst_berry",
+          "second": "cobblemon:chople_berry"
+        },
+        {
+          "first": "cobblemon:chilan_berry",
+          "second": "cobblemon:chople_berry"
+        }
+      ]
+    }
+  ]
+}
