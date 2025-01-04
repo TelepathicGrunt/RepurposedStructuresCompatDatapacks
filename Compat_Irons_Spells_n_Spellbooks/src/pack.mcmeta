@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "Repurposed Structures - ${mod_dependency_name} v${mod_version}",
+    "description": "Repurposed Structures - Iron's Spells n Spellbooks PR Prototype",
     "pack_format": 26,
     "supported_formats": [0, 1000000]
   }
