@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/crimson/houses",
-  "fallback": "cobblemon:villages/crimson/houses",
+  "name": "cobblemon:villages/crimson/pokecenter",
+  "fallback": "cobblemon:villages/crimson/pokecenter",
   "elements": [
     {
       "weight": 1,

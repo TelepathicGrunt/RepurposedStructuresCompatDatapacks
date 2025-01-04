@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/mushroom/houses",
-  "fallback": "cobblemon:villages/mushroom/houses",
+  "name": "cobblemon:villages/mushroom/pokecenter",
+  "fallback": "cobblemon:villages/mushroom/pokecenter",
   "elements": [
     {
       "weight": 1,

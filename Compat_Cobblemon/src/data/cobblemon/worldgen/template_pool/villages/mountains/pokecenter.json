@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/mountains/houses",
-  "fallback": "cobblemon:villages/mountains/houses",
+  "name": "cobblemon:villages/mountains/pokecenter",
+  "fallback": "cobblemon:villages/mountains/pokecenter",
   "elements": [
     {
       "weight": 1,

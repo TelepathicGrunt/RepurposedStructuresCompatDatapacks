@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/swamp/houses",
-  "fallback": "cobblemon:villages/swamp/houses",
+  "name": "cobblemon:villages/swamp/pokecenter",
+  "fallback": "cobblemon:villages/swamp/pokecenter",
   "elements": [
     {
       "weight": 1,

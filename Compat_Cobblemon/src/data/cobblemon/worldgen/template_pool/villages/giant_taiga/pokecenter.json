@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/giant_taiga/houses",
-  "fallback": "cobblemon:villages/giant_taiga/houses",
+  "name": "cobblemon:villages/giant_taiga/pokecenter",
+  "fallback": "cobblemon:villages/giant_taiga/pokecenter",
   "elements": [
     {
       "weight": 1,

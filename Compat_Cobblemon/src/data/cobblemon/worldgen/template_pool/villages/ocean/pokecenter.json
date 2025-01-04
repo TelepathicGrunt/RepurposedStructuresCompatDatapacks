@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/ocean/houses",
-  "fallback": "cobblemon:villages/ocean/houses",
+  "name": "cobblemon:villages/ocean/pokecenter",
+  "fallback": "cobblemon:villages/ocean/pokecenter",
   "elements": [
     {
       "weight": 1,

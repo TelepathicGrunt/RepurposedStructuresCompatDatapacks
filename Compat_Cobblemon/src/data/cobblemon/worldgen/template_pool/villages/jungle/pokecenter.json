@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/jungle/houses",
-  "fallback": "cobblemon:villages/jungle/houses",
+  "name": "cobblemon:villages/jungle/pokecenter",
+  "fallback": "cobblemon:villages/jungle/pokecenter",
   "elements": [
     {
       "weight": 1,

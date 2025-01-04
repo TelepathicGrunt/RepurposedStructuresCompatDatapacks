@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/dark_forest/houses",
-  "fallback": "cobblemon:villages/dark_forest/houses",
+  "name": "cobblemon:villages/dark_forest/pokecenter",
+  "fallback": "cobblemon:villages/dark_forest/pokecenter",
   "elements": [
     {
       "weight": 1,

@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/cherry/houses",
-  "fallback": "cobblemon:villages/cherry/houses",
+  "name": "cobblemon:villages/cherry/pokecenter",
+  "fallback": "cobblemon:villages/cherry/pokecenter",
   "elements": [
     {
       "weight": 1,

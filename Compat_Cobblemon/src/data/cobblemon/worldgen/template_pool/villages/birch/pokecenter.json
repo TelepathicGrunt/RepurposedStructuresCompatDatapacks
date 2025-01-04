@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/birch/houses",
-  "fallback": "cobblemon:villages/birch/houses",
+  "name": "cobblemon:villages/birch/pokecenter",
+  "fallback": "cobblemon:villages/birch/pokecenter",
   "elements": [
     {
       "weight": 1,

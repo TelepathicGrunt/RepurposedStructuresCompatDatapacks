@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/bamboo/houses",
-  "fallback": "cobblemon:villages/bamboo/houses",
+  "name": "cobblemon:villages/bamboo/pokecenter",
+  "fallback": "cobblemon:villages/bamboo/pokecenter",
   "elements": [
     {
       "weight": 1,

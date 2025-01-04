@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/badlands/houses",
-  "fallback": "cobblemon:villages/badlands/houses",
+  "name": "cobblemon:villages/badlands/pokecenter",
+  "fallback": "cobblemon:villages/badlands/pokecenter",
   "elements": [
     {
       "weight": 1,

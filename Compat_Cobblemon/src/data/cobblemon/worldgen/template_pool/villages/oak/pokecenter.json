@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/oak/houses",
-  "fallback": "cobblemon:villages/oak/houses",
+  "name": "cobblemon:villages/oak/pokecenter",
+  "fallback": "cobblemon:villages/oak/pokecenter",
   "elements": [
     {
       "weight": 1,

@@ -1,6 +1,6 @@
 {
-  "name": "cobblemon:villages/warped/houses",
-  "fallback": "cobblemon:villages/warped/houses",
+  "name": "cobblemon:villages/warped/pokecenter",
+  "fallback": "cobblemon:villages/warped/pokecenter",
   "elements": [
     {
       "weight": 1,
