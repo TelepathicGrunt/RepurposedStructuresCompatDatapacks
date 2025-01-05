@@ -1,0 +1,24 @@
+{
+  "target_pool": "repurposed_structures:villages/giant_taiga/houses",
+  "fallback": "repurposed_structures:villages/giant_taiga/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "cobblemon:villages/giant_taiga/berry_small",
+        "processors": "cobblemon:villages/giant_taiga/crop_to_berry",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "cobblemon:villages/giant_taiga/berry_large",
+        "processors": "cobblemon:villages/giant_taiga/crop_to_berry",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

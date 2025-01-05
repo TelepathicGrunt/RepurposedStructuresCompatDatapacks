@@ -1,0 +1,17 @@
+{
+  "target_structure": "repurposed_structures:village_giant_taiga",
+  "pieces_spawn_counts": [
+    {
+      "nbt_piece_name": "cobblemon:villages/giant_taiga/long_path",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "cobblemon:villages/giant_taiga/berry_large",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name": "cobblemon:villages/giant_taiga/berry_small",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

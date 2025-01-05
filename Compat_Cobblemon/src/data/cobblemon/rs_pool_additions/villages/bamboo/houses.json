@@ -1,0 +1,24 @@
+{
+  "target_pool": "repurposed_structures:villages/bamboo/houses",
+  "fallback": "repurposed_structures:villages/bamboo/terminators",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "cobblemon:villages/bamboo/berry_small",
+        "processors": "cobblemon:villages/bamboo/crop_to_berry",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "cobblemon:villages/bamboo/berry_large",
+        "processors": "cobblemon:villages/bamboo/crop_to_berry",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

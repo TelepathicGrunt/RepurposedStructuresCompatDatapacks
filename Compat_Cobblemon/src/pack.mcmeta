@@ -1,7 +1,7 @@
 {
   "pack": {
-    "description": "Repurposed Structures - Cobblemon v1",
-    "pack_format": 15,
+    "description": "Repurposed Structures - Cobblemon PR Prototype",
+    "pack_format": 28,
     "supported_formats": [0, 1000000]
   }
 }
