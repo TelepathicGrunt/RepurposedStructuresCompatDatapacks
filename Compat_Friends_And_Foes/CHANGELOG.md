@@ -1,1 +1,1 @@
-Now in mod form!
+Fix village pieces not spawning

@@ -66,7 +66,7 @@ subprojects {
                 fileDependencyModName = project.alternative_mod_dependency_name
             }
 
-            File changeLog = rootProject.file("CHANGELOG.md")
+            File changeLog = project.file("CHANGELOG.md")
             String changeLogText = changeLog.exists() ? changeLog.text : ""
 
             publishMods {
