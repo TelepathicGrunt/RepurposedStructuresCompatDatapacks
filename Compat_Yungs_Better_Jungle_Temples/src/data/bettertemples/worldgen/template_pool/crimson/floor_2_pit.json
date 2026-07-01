@@ -52,10 +52,6 @@
             {
               "type": "yungsapi:mod_loaded",
               "modid": "alexsmobs"
-            },
-            {
-              "type": "yungsapi:mod_loader",
-              "loaders": [ "forge" ]
             }
           ]
         },

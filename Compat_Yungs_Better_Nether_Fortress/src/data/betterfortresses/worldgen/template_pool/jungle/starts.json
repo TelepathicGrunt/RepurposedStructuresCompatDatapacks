@@ -27,10 +27,6 @@
             {
               "type": "yungsapi:rotation",
               "rotations": [ "none" ]
-            },
-            {
-              "type": "yungsapi:mod_loader",
-              "loaders": [ "neoforge" ]
             }
           ]
         },
