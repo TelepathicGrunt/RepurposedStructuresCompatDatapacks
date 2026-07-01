@@ -30,7 +30,7 @@
             },
             {
               "type": "yungsapi:mod_loader",
-              "loaders": [ "forge" ]
+              "loaders": [ "neoforge" ]
             }
           ]
         },
