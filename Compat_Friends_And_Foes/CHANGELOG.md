@@ -1,1 +1,1 @@
-Fix village pieces not spawning
+Fix fabric api dependency requirement

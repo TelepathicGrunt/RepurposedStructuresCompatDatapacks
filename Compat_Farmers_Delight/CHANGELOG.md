@@ -1,0 +1,1 @@
+Fix fabric api dependency requirement
